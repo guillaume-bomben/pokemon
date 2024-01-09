@@ -3,11 +3,8 @@ from pokemon_Liste import pokemon_Liste
 class pokemon(pokemon_Liste):
     def __init__(self, name, PV, Attaque, Defense, Attaque_Speciale, Defense_Speciale, Vitesse,type1,type2,lv=1):
         super().__init__(name, PV, Attaque, Defense, Attaque_Speciale, Defense_Speciale, Vitesse,type1,type2)
-        self.name = name
         self.lv = lv
         self.xp = 0
-        self.type1 = type1
-        self.type2 = type2
         if lv == 1:
             self.ppv = PV
             self.pattaque = Attaque
