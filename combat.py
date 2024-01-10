@@ -1,3 +1,5 @@
+import csv
+from pokemon import pokemon
 import random
 import pygame
 
@@ -13,15 +15,21 @@ noir = (0, 0, 0)
 
 # Classe pour gérer l'écran de combat
 class Combat:
-    def __init__(self):
+    def __init__(self,PpokName,EpokName):
         #self.fond = pygame.image.load('fond combat.jpg')  # Charger l'image de fond du combat
         self.joueur = pygame.image.load('player.png')  # Charger l'image du joueur
         self.adversaire = pygame.image.load('ennemy.png')  # Charger l'image de l'adversaire
         self.position_joueur = (200, 300)  # Position du joueur
         self.position_adversaire = (550, 100)  # Position de l'adversaire
         
-        self.vie_joueur = 100
-        self.vie_adversaire = 100
+        with open("pokemon_liste.csv", "r") as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if row[0] == PpokName:
+                    player = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
+                if row[0] == EpokName:
+                    ennemy = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
+        
         self.couleur_vie = (0, 255, 0)
 
         self.tour_joueur = True
