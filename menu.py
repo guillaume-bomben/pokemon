@@ -14,7 +14,7 @@ pygame.mixer.music.set_volume(0.5)
 son_clic = pygame.mixer.Sound("son/pet.mp3")
 volume_bruitage = 1
 
-blanc = (255, 255, 255)
+noir = (0, 0, 0)
 
 
 class MenuPrincipal:
@@ -60,11 +60,11 @@ class MenuPrincipal:
             fenetre.blit(self.image_titre, (largeur_fenetre // 2 - 200, hauteur_fenetre // 4 - 50))
 
             for i, option in enumerate(self.options):
-                texte_option = self.police_texte.render(option, True, blanc)
+                texte_option = self.police_texte.render(option, True, noir)
                 texte_rect_option = texte_option.get_rect(center=(largeur_fenetre // 2, hauteur_fenetre // 2 + i * 40))
                 fenetre.blit(texte_option, texte_rect_option)
 
-            pygame.draw.line(fenetre, blanc, (largeur_fenetre // 2 - 70, hauteur_fenetre // 2 + self.option_selectionnee * 40 + 10),
+            pygame.draw.line(fenetre, noir, (largeur_fenetre // 2 - 70, hauteur_fenetre // 2 + self.option_selectionnee * 40 + 10),
                              (largeur_fenetre // 2 + 70, hauteur_fenetre // 2 + self.option_selectionnee * 40 + 10), 2)
 
             pygame.display.flip()
@@ -97,7 +97,7 @@ class MenuPrincipal:
                             type_pokemon += event.unicode
 
             fenetre.fill((0, 0, 0))  # Efface l'écran
-            texte_saisi = self.police_texte.render(f"Nom: {nom_pokemon}" if phase_saisie == 1 else f"Type: {type_pokemon}", True, blanc)
+            texte_saisi = self.police_texte.render(f"Nom: {nom_pokemon}" if phase_saisie == 1 else f"Type: {type_pokemon}", True, noir)
             fenetre.blit(texte_saisi, (100, 100))  # Ajustez la position selon vos besoins
             pygame.display.flip()
 
@@ -132,11 +132,11 @@ class MenuOptions:
 
             fenetre.blit(menu_principal.image_fond, (0, 0))
 
-            texte_titre_options = self.police_titre.render("Menu Options", True, blanc)
+            texte_titre_options = self.police_titre.render("Menu Options", True, noir)
             texte_rect_titre_options = texte_titre_options.get_rect(center=(largeur_fenetre // 2, hauteur_fenetre // 4))
             fenetre.blit(texte_titre_options, texte_rect_titre_options)
 
-            texte_volume = self.police_texte.render(f"Volume des bruitages: {int(volume_bruitage * 100)}%", True, blanc)
+            texte_volume = self.police_texte.render(f"Volume des bruitages: {int(volume_bruitage * 100)}%", True, noir)
             texte_rect_volume = texte_volume.get_rect(center=(largeur_fenetre // 2, hauteur_fenetre // 2))
             fenetre.blit(texte_volume, texte_rect_volume)
 
@@ -150,7 +150,7 @@ class MenuCredits:
         self.credits = [
             "Développeur 1 : Tommy Le Bg",
             "Développeur 2 : Guillaume La RTX",
-            "Développeur 3 : Val Le Lacoste",
+            "Développeur 3 : Val avec son bateau nul",
         ]
 
     def afficher_menu_credits(self):
@@ -169,13 +169,13 @@ class MenuCredits:
 
             fenetre.blit(menu_principal.image_fond, (0, 0))
 
-            texte_titre_credits = self.police_titre.render("Crédits", True, blanc)
+            texte_titre_credits = self.police_titre.render("Crédits", True, noir)
             texte_rect_titre_credits = texte_titre_credits.get_rect(center=(largeur_fenetre // 2, hauteur_fenetre // 4))
             fenetre.blit(texte_titre_credits, texte_rect_titre_credits)
 
             y_position = hauteur_fenetre // 2
             for ligne_credit in self.credits:
-                texte_credit = self.police_texte.render(ligne_credit, True, blanc)
+                texte_credit = self.police_texte.render(ligne_credit, True, noir)
                 texte_rect_credit = texte_credit.get_rect(center=(largeur_fenetre // 2, y_position))
                 fenetre.blit(texte_credit, texte_rect_credit)
                 y_position += 40
