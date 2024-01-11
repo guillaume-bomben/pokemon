@@ -16,11 +16,12 @@ class Player(Entity):
         super().update()
 
     def check_move(self):
-        if self.keylistener.key_pressed(pygame.K_q):
-            self.move_left()
-        elif self.keylistener.key_pressed(pygame.K_d):
-            self.move_right()
-        elif self.keylistener.key_pressed(pygame.K_z):
-            self.move_up()
-        elif self.keylistener.key_pressed(pygame.K_s):
-            self.move_down()
+        if self.animation_walk is False:
+            if self.keylistener.key_pressed(pygame.K_q):
+                self.move_left()
+            elif self.keylistener.key_pressed(pygame.K_d):
+                self.move_right()
+            elif self.keylistener.key_pressed(pygame.K_z):
+                self.move_up()
+            elif self.keylistener.key_pressed(pygame.K_s):
+                self.move_down()

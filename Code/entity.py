@@ -15,6 +15,9 @@ class Entity(pygame.sprite.Sprite):
         self.position: pygame.math.Vector2 = pygame.math.Vector2(x + 232, y + 135)
         self.rect: pygame.Rect = self.image.get_rect()
         self.all_images = self.get_all_images()
+        self.index_image = 0
+        self.image_part = 0
+        self.reset_animation = False
 
         self.hitbox: pygame.Rect = pygame.Rect(0, 0, 16, 16)
         
@@ -22,31 +25,67 @@ class Entity(pygame.sprite.Sprite):
         self.animation_walk: bool = False
         self.direction = "down"
 
+        self.animation_step_time: float = 0.0
+        self.action_animation = 16
+
 
     def update(self):
+        self.animation_sprite()
+        self.move()
         self.rect.center = self.position
         self.hitbox.midbottom = self.rect.midbottom
-
+        if 0 <= self.index_image < len(self.all_images[self.direction]):
+            self.image = self.all_images[self.direction][self.index_image]
+        else: 
+            self.index_image = 0
 
     def move_left(self):
         self.animation_walk = True
         self.direction = "left"
-        self.image = self.all_images["left"][0]
     
     def move_right(self):
         self.animation_walk = True
         self.direction = "right"
-        self.image = self.all_images["right"][0]
     
     def move_up(self):
         self.animation_walk = True
         self.direction = "up"
-        self.image = self.all_images["up"][0]
 
     def move_down(self):
         self.animation_walk = True
         self.direction = "down"
-        self.image = self.all_images["down"][0]
+
+    def animation_sprite(self):
+        if int(self.step // 8) + self.image_part >= 4:
+            self.image_part = 0
+            self.reset_animation = True
+        self.index_image = int(self.step // 8) + self.image_part
+
+    def move(self):
+        if self.animation_walk:
+            self.animation_step_time += self.screen.get_delta_time()
+            if self.step < 16 and self.animation_step_time >= self.action_animation:
+                self.step += 1
+                if self.direction == "left":
+                    self.position.x -= 1
+                elif self.direction == "right":
+                    self.position.x += 1
+                elif self.direction == "up":
+                    self.position.y -= 1
+                elif self.direction == "down":
+                    self.position.y += 1
+                self.animation_step_time = 0
+
+            elif self.step >= 16:
+                self.step = 0 
+                self.animation_walk = False
+                if self.reset_animation:
+                    self.reset_animation = False
+                else:
+                    if self.image_part == 0:
+                        self.image_part = 2
+                    else:
+                        self.image_part = 0
 
     def align_hitbox(self):
         self.rect.center = self.position
@@ -74,4 +113,4 @@ class Entity(pygame.sprite.Sprite):
         for i in range(4):
             for j, key in enumerate(all_images.keys()):
                 all_images[key].append(Tool.split_image(self.spritesheet, i * width, j * height, 24, 32))
-            return all_images
+        return all_images
