@@ -16,11 +16,16 @@ noir = (0, 0, 0)
 # Classe pour gérer l'écran de combat
 class Combat:
     def __init__(self,PpokName,EpokName):
-        #self.fond = pygame.image.load('fond combat.jpg')  # Charger l'image de fond du combat
+        image = pygame.image.load('fond combat.jpg')  # Charger l'image de fond du combat
+        #self.fond = pygame.image.load('fond combat.jpg')
+        self.fond = pygame.transform.scale(image,(800,400))
         self.joueur = pygame.image.load('player.png')  # Charger l'image du joueur
         self.adversaire = pygame.image.load('ennemy.png')  # Charger l'image de l'adversaire
         self.position_joueur = (200, 300)  # Position du joueur
         self.position_adversaire = (550, 100)  # Position de l'adversaire
+        
+        #player = None
+        #ennemy = None
         
         with open("pokemon_liste.csv", "r") as file:
             reader = csv.reader(file)
@@ -29,6 +34,9 @@ class Combat:
                     player = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
                 if row[0] == EpokName:
                     ennemy = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
+        
+        self.player = player
+        self.ennemy = ennemy
         
         self.couleur_vie = (0, 255, 0)
 
@@ -48,17 +56,19 @@ class Combat:
 
 
     def afficher(self):
-        #ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
+        ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
         ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
         ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         
         # Dessiner la barre de vie du joueur
-        pygame.draw.rect(ecran, self.couleur_vie, (self.position_joueur[0], self.position_joueur[1] - 20, self.vie_joueur, 10))
-        pygame.draw.rect(ecran, noir, (self.position_joueur[0], self.position_joueur[1] - 20, 100, 10), 2)  # Bordure
+        max_life_player = int(self.player.ppv)
+        pygame.draw.rect(ecran, self.couleur_vie, (self.position_joueur[0], self.position_joueur[1] - 20, int(self.player.ppv), 10))
+        pygame.draw.rect(ecran, noir, (self.position_joueur[0], self.position_joueur[1] - 20, max_life_player, 10), 2)  # Bordure
 
         # Dessiner la barre de vie de l'adversaire
-        pygame.draw.rect(ecran, self.couleur_vie, (self.position_adversaire[0], self.position_adversaire[1] - 20, self.vie_adversaire, 10))
-        pygame.draw.rect(ecran, noir, (self.position_adversaire[0], self.position_adversaire[1] - 20, 100, 10), 2)  # Bordure
+        max_life_ennemy = int(self.ennemy.ppv)
+        pygame.draw.rect(ecran, self.couleur_vie, (self.position_adversaire[0], self.position_adversaire[1] - 20, int(self.ennemy.ppv), 10))
+        pygame.draw.rect(ecran, noir, (self.position_adversaire[0], self.position_adversaire[1] - 20, max_life_ennemy, 10), 2)  # Bordure
         
         if self.afficher_menu:
             pygame.draw.rect(ecran, noir, self.bouton_attaque_pos)
@@ -79,16 +89,18 @@ class Combat:
             self.attaquer_adversaire()
         '''
         if self.tour_joueur:
-            self.vie_adversaire -= 20
+            self.ennemy.ppv = int(self.ennemy.ppv)
+            self.ennemy.ppv -= 20
             self.tour_joueur = False
             self.afficher_menu = False
 
     
     def attaquer_adversaire(self):
         # Simuler une attaque de l'adversaire (pour l'exemple, cela réduit de manière aléatoire la vie du joueur)
-        if self.vie_joueur > 0:  # Vérifier si le joueur est toujours en vie
+        if int(self.player.ppv) > 0:  # Vérifier si le joueur est toujours en vie
             degats = random.randint(10, 25)  # Dégâts aléatoires pour l'attaque de l'adversaire
-            self.vie_joueur -= degats  # Réduire les points de vie du joueur
+            self.player.ppv = int(self.ennemy.ppv)
+            self.player.ppv -= degats  # Réduire les points de vie du joueur
             self.tour_joueur = True  # Passer au tour du joueur
         
     def gerer_evenements(self, event):

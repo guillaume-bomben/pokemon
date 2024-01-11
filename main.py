@@ -13,7 +13,7 @@ pygame.display.set_caption("Combat Pokémon")
 blanc = (255, 255, 255)
 
 def main():
-    combat = Combat()  # Créer une instance de la classe Combat
+    combat = Combat("Salameche","Bulbizarre")  # Créer une instance de la classe Combat
 
     # Boucle de jeu
     running = True
