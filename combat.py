@@ -18,9 +18,9 @@ class Combat:
     def __init__(self,PpokName,EpokName):
         self.fond = pygame.image.load('assets/Combat/Combat Background.png')  # Charger l'image de fond du combat
         Ijoueur = pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png')  # Charger l'image du joueur
-        self.joueur = pygame.transform.scale(Ijoueur,(270,270))
+        self.joueur = pygame.transform.scale(Ijoueur,(250,250))
         Iadversaire = pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png')  # Charger l'image de l'adversaire
-        self.adversaire = pygame.transform.scale(Iadversaire,(270,270))
+        self.adversaire = pygame.transform.scale(Iadversaire,(250,250))
         self.position_joueur = (45, 280)  # Position du joueur
         self.position_adversaire = (470, 140)  # Position de l'adversaire
         
