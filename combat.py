@@ -16,9 +16,7 @@ noir = (0, 0, 0)
 # Classe pour gérer l'écran de combat
 class Combat:
     def __init__(self,PpokName,EpokName):
-        image = pygame.image.load('fond combat.jpg')  # Charger l'image de fond du combat
-        #self.fond = pygame.image.load('fond combat.jpg')
-        self.fond = pygame.transform.scale(image,(800,400))
+        self.fond = pygame.image.load('Combat Background.png')  # Charger l'image de fond du combat
         self.joueur = pygame.image.load('player.png')  # Charger l'image du joueur
         self.adversaire = pygame.image.load('ennemy.png')  # Charger l'image de l'adversaire
         self.position_joueur = (200, 300)  # Position du joueur
@@ -61,14 +59,12 @@ class Combat:
         ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         
         # Dessiner la barre de vie du joueur
-        max_life_player = int(self.player.ppv)
-        pygame.draw.rect(ecran, self.couleur_vie, (self.position_joueur[0], self.position_joueur[1] - 20, int(self.player.ppv), 10))
-        pygame.draw.rect(ecran, noir, (self.position_joueur[0], self.position_joueur[1] - 20, max_life_player, 10), 2)  # Bordure
+        pygame.draw.rect(ecran, self.couleur_vie, (571, 428, 168, 13))
+        pygame.draw.rect(ecran, noir, (571, 428, 168, 13), 2)  # Bordure
 
         # Dessiner la barre de vie de l'adversaire
-        max_life_ennemy = int(self.ennemy.ppv)
-        pygame.draw.rect(ecran, self.couleur_vie, (self.position_adversaire[0], self.position_adversaire[1] - 20, int(self.ennemy.ppv), 10))
-        pygame.draw.rect(ecran, noir, (self.position_adversaire[0], self.position_adversaire[1] - 20, max_life_ennemy, 10), 2)  # Bordure
+        pygame.draw.rect(ecran, self.couleur_vie, (131,140, 168, 12))
+        pygame.draw.rect(ecran, noir, (131, 140, 168, 12), 2)  # Bordure
         
         if self.afficher_menu:
             pygame.draw.rect(ecran, noir, self.bouton_attaque_pos)
