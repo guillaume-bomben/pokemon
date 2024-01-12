@@ -17,10 +17,12 @@ noir = (0, 0, 0)
 class Combat:
     def __init__(self,PpokName,EpokName):
         self.fond = pygame.image.load('Combat Background.png')  # Charger l'image de fond du combat
-        self.joueur = pygame.image.load('player.png')  # Charger l'image du joueur
-        self.adversaire = pygame.image.load('ennemy.png')  # Charger l'image de l'adversaire
-        self.position_joueur = (200, 300)  # Position du joueur
-        self.position_adversaire = (550, 100)  # Position de l'adversaire
+        Ijoueur = pygame.image.load('player.png')  # Charger l'image du joueur
+        self.joueur = pygame.transform.scale(Ijoueur,(270,270))
+        Iadversaire = pygame.image.load('ennemy.png')  # Charger l'image de l'adversaire
+        self.adversaire = pygame.transform.scale(Iadversaire,(270,270))
+        self.position_joueur = (45, 280)  # Position du joueur
+        self.position_adversaire = (470, 140)  # Position de l'adversaire
         
         #player = None
         #ennemy = None
