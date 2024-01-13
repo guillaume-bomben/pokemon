@@ -3,51 +3,41 @@ from pokemon import pokemon
 import random
 import pygame
 
-pygame.init()
-# Définition de certaines constantes pour l'écran
-largeur_ecran = 800
-hauteur_ecran = 600
-ecran = pygame.display.set_mode((largeur_ecran, hauteur_ecran))
-pygame.display.set_caption("Combat Pokémon")
-# Couleurs
-blanc = (255, 255, 255)
-noir = (0, 0, 0)
-
-# Classe pour gérer l'écran de combat
 class Combat:
     def __init__(self,PpokName,EpokName):
-        self.fond = pygame.image.load('assets/Combat/Combat Background.png')  # Charger l'image de fond du combat
-        Ijoueur = pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png')  # Charger l'image du joueur
+        self.fond = pygame.image.load('assets/Combat/Combat Background.png')  
+        Ijoueur = pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png')
         self.joueur = pygame.transform.scale(Ijoueur,(250,250))
-        Iadversaire = pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png')  # Charger l'image de l'adversaire
+        Iadversaire = pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') 
         self.adversaire = pygame.transform.scale(Iadversaire,(250,250))
-        self.position_joueur = (45, 280)  # Position du joueur
-        self.position_adversaire = (470, 140)  # Position de l'adversaire
+        self.position_joueur = (45, 280)
+        self.position_adversaire = (470, 140)
         
-        player = pokemon(PpokName)
-        ennemy = pokemon(EpokName)
+        self.player = pokemon(PpokName)
+        self.ennemy = pokemon(EpokName)
         
-        self.player = player
-        self.ennemy = ennemy
-        
-        self.couleur_vie = (0, 255, 0)
+        self.vert = (0, 255, 0)
+        self.blanc = (255, 255, 255)
+        self.noir = (0, 0, 0)
+
+        self.ecran = pygame.display.set_mode((800, 600))
 
         self.tour_joueur = True
         self.afficher_menu = True
 
 
     def afficher(self):
-        ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
-        ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
-        ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
+        self.ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
+        self.ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
+        self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         
         # Dessiner la barre de vie du joueur
-        pygame.draw.rect(ecran, self.couleur_vie, (571, 428, 168, 13))
-        pygame.draw.rect(ecran, noir, (571, 428, 168, 13), 2)  # Bordure
+        pygame.draw.rect(self.ecran, self.vert, (571, 428, 168, 13))
+        pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
         # Dessiner la barre de vie de l'adversaire
-        pygame.draw.rect(ecran, self.couleur_vie, (131,140, 168, 12))
-        pygame.draw.rect(ecran, noir, (131, 140, 168, 12), 2)  # Bordure
+        pygame.draw.rect(self.ecran, self.vert, (131,140, 168, 12))
+        pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
         
 
     def attaquer(self):
@@ -73,9 +63,3 @@ class Combat:
                 if self.bouton_attaque_pos[0] <= mouse_x <= self.bouton_attaque_pos[0] + self.bouton_attaque_pos[2] \
                         and self.bouton_attaque_pos[1] <= mouse_y <= self.bouton_attaque_pos[1] + self.bouton_attaque_pos[3]:
                     self.attaquer()
-
-
-    def update(self):
-        # Mettre à jour l'état du jeu
-        pass  # Pour l'instant, il n'y a pas de mises à jour à faire
-
