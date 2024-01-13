@@ -1,0 +1,15 @@
+{
+  "Name": "Caninos",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 70,
+    "Defense": 45,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 50,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

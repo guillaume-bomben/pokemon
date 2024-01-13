@@ -1,0 +1,15 @@
+{
+  "Name": "Mystherbe",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 50,
+    "Defense": 55,
+    "Attaque_Speciale": 75,
+    "Defense_Speciale": 65,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

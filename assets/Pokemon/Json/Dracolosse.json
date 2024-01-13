@@ -1,0 +1,15 @@
+{
+  "Name": "Dracolosse",
+  "Stat": {
+    "PV": 91,
+    "Attaque": 134,
+    "Defense": 95,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 100,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "Vol"
+  }
+}

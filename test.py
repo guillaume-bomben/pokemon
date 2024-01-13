@@ -1,17 +1,45 @@
-from pokemon_Liste import pokemon_Liste
 import csv
+import json
+import os
 
-liste = []
-i=0
-with open("pokemon_liste.csv", "r") as file:
-    reader = csv.reader(file)
-    for row in reader:
-        id = f"id-{i}"
-        id = pokemon_Liste(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
-        liste.append(id)
-        i +=1
+def convert_csv_to_json(input_csv_path, output_json_folder):
+    # Créer un dossier de sortie s'il n'existe pas
+    if not os.path.exists(output_json_folder):
+        os.makedirs(output_json_folder)
 
-for pokemon in liste:
-    print(pokemon)
+    # Ouvrir le fichier CSV en mode lecture
+    with open(input_csv_path, 'r') as csv_file:
+        # Lire le fichier CSV avec DictReader
+        csv_reader = csv.reader(csv_file)
 
+        # Parcourir chaque ligne du fichier CSV
+        for row in csv_reader:
+            # Créer une structure de données pour le fichier JSON
+            json_data = {
+                "Name": row[0],
+                "Stat": {
+                    "PV": int(row[1]),
+                    "Attaque": int(row[2]),
+                    "Defense": int(row[3]),
+                    "Attaque_Speciale": int(row[4]),
+                    "Defense_Speciale": int(row[5]),
+                    "Vitesse": int(row[6])
+                },
+                "Type": {
+                    "Type1": row[7],
+                    "Type2": row[8]
+                }
+            }
 
+            # Créer un nom de fichier unique basé sur le nom du Pokémon
+            json_filename = f'{row[0]}.json'
+
+            # Chemin complet pour le fichier JSON de sortie
+            json_filepath = os.path.join(output_json_folder, json_filename)
+
+            # Écrire la structure de données dans le fichier JSON
+            with open(json_filepath, 'w') as json_file:
+                json.dump(json_data, json_file, indent=2)
+
+# Exemple d'utilisation
+convert_csv_to_json('pokemon_liste.csv', 'assets/Pokemon/Json')

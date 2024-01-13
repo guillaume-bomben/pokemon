@@ -1,0 +1,15 @@
+{
+  "Name": "Evoli",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 55,
+    "Defense": 50,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 65,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

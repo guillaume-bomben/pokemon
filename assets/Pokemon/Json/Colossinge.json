@@ -1,0 +1,15 @@
+{
+  "Name": "Colossinge",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 105,
+    "Defense": 60,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 70,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}

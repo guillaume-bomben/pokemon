@@ -1,0 +1,15 @@
+{
+  "Name": "Tauros",
+  "Stat": {
+    "PV": 75,
+    "Attaque": 100,
+    "Defense": 95,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 70,
+    "Vitesse": 110
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

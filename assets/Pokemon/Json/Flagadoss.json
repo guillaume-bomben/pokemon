@@ -1,0 +1,15 @@
+{
+  "Name": "Flagadoss",
+  "Stat": {
+    "PV": 95,
+    "Attaque": 75,
+    "Defense": 110,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 80,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Psy"
+  }
+}

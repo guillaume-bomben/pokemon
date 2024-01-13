@@ -1,0 +1,15 @@
+{
+  "Name": "Salameche",
+  "Stat": {
+    "PV": 39,
+    "Attaque": 52,
+    "Defense": 43,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 50,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

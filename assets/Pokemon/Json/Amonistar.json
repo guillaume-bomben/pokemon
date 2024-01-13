@@ -1,0 +1,15 @@
+{
+  "Name": "Amonistar",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 60,
+    "Defense": 125,
+    "Attaque_Speciale": 115,
+    "Defense_Speciale": 70,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Eau"
+  }
+}

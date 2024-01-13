@@ -1,0 +1,15 @@
+{
+  "Name": "Nidorina",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 62,
+    "Defense": 67,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 55,
+    "Vitesse": 56
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Canarticho",
+  "Stat": {
+    "PV": 52,
+    "Attaque": 65,
+    "Defense": 55,
+    "Attaque_Speciale": 58,
+    "Defense_Speciale": 62,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

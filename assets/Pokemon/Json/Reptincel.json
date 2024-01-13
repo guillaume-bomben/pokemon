@@ -1,0 +1,15 @@
+{
+  "Name": "Reptincel",
+  "Stat": {
+    "PV": 58,
+    "Attaque": 64,
+    "Defense": 58,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 65,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

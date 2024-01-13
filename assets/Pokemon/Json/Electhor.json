@@ -1,0 +1,15 @@
+{
+  "Name": "Electhor",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 90,
+    "Defense": 85,
+    "Attaque_Speciale": 125,
+    "Defense_Speciale": 90,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "Vol"
+  }
+}

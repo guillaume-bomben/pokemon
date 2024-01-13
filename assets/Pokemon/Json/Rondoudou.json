@@ -1,0 +1,15 @@
+{
+  "Name": "Rondoudou",
+  "Stat": {
+    "PV": 115,
+    "Attaque": 45,
+    "Defense": 20,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 25,
+    "Vitesse": 20
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Fee"
+  }
+}

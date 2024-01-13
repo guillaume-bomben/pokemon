@@ -1,0 +1,15 @@
+{
+  "Name": "Gravalanch",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 95,
+    "Defense": 115,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 45,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Sol"
+  }
+}

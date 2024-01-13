@@ -1,0 +1,15 @@
+{
+  "Name": "M. Mime",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 45,
+    "Defense": 65,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 120,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "Fee"
+  }
+}

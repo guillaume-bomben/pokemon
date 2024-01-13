@@ -1,0 +1,15 @@
+{
+  "Name": "Krabby",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 105,
+    "Defense": 90,
+    "Attaque_Speciale": 25,
+    "Defense_Speciale": 25,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

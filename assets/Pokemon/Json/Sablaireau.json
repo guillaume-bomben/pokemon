@@ -1,0 +1,15 @@
+{
+  "Name": "Sablaireau",
+  "Stat": {
+    "PV": 75,
+    "Attaque": 100,
+    "Defense": 110,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 55,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

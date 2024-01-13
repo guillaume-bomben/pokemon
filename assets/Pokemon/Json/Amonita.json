@@ -1,0 +1,15 @@
+{
+  "Name": "Amonita",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 40,
+    "Defense": 100,
+    "Attaque_Speciale": 90,
+    "Defense_Speciale": 55,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Eau"
+  }
+}

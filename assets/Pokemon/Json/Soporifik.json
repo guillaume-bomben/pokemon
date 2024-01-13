@@ -1,0 +1,15 @@
+{
+  "Name": "Soporifik",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 48,
+    "Defense": 45,
+    "Attaque_Speciale": 43,
+    "Defense_Speciale": 90,
+    "Vitesse": 42
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Voltorbe",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 30,
+    "Defense": 50,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 55,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  }
+}

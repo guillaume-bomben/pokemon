@@ -1,0 +1,15 @@
+{
+  "Name": "Alakazam",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 50,
+    "Defense": 45,
+    "Attaque_Speciale": 135,
+    "Defense_Speciale": 85,
+    "Vitesse": 120
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

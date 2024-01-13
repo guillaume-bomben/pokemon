@@ -1,0 +1,15 @@
+{
+  "Name": "Poissirene",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 67,
+    "Defense": 60,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 50,
+    "Vitesse": 63
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

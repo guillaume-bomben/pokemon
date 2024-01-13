@@ -1,0 +1,15 @@
+{
+  "Name": "Tentacruel",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 70,
+    "Defense": 65,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 120,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Poison"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Racaillou",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 80,
+    "Defense": 100,
+    "Attaque_Speciale": 30,
+    "Defense_Speciale": 30,
+    "Vitesse": 20
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Sol"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Insecateur",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 110,
+    "Defense": 80,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 80,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Vol"
+  }
+}

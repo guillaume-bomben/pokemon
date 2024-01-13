@@ -1,0 +1,15 @@
+{
+  "Name": "Triopikeur",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 80,
+    "Defense": 50,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 70,
+    "Vitesse": 120
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

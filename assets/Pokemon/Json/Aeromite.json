@@ -1,0 +1,15 @@
+{
+  "Name": "Aeromite",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 65,
+    "Defense": 60,
+    "Attaque_Speciale": 90,
+    "Defense_Speciale": 75,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  }
+}

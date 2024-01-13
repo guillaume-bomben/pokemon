@@ -1,0 +1,15 @@
+{
+  "Name": "Psykokwak",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 52,
+    "Defense": 48,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 50,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

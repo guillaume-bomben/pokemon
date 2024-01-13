@@ -1,27 +1,33 @@
-from pokemon_Liste import pokemon_Liste
-
-class pokemon(pokemon_Liste):
-    def __init__(self, name, PV, Attaque, Defense, Attaque_Speciale, Defense_Speciale, Vitesse,type1,type2,lv=1):
-        super().__init__(name, PV, Attaque, Defense, Attaque_Speciale, Defense_Speciale, Vitesse,type1,type2)
+class pokemon:
+    def __init__(self, name,lv=1):
         self.lv = lv
         self.xp = 0
-        if lv == 1:
-            self.ppv = PV
-            self.pattaque = Attaque
-            self.pdefence = Defense
-            self.pattaque_special = Attaque_Speciale
-            self.pdefence_speciale = Defense_Speciale
-            self.pvitesse = Vitesse
-        else:
-            self.recalcul_stat()
+        with open(f"{name}.json","r") as pok:
+            self.name = pok["Name"]
+            self.type1 = pok["type1"]
+            self.type2 = pok["type2"]
+            
+            if lv == 1:
+                self.pv = pok["PV"]
+                self.attaque = pok["Attaque"]
+                self.defense = pok["Defense"]
+                self.attaque_special = pok["Attaque_Speciale"]
+                self.defence_special = pok["Defense_Speciale"]
+                self.vitesse = pok["Vitesse"]
+            else:
+                self.recalcul_stat()
 
+    def __str__(self):
+        return f"{self.name} , LV-{self.lv}: HP-{self.pv}, Attaque-{self.attaque}, Défense-{self.defense}, Attaque Spé-{self.attaque_special}, Défense Spé-{self.defence_special}, Vitesse-{self.vitesse}, Type1-{self.type1}, Type2-{self.type2}"
+    
     def recalcul_stat(self):
-        self.ppv = (2*self.pv) * (self.lv / 100) + self.lv + 10
-        self.pattaque = (2*self.attaque) * (self.lv / 100) + self.lv + 10
-        self.pdefence = (2*self.defence) * (self.lv / 100) + self.lv + 10
-        self.pattaque_special = (2*self.attaque_special) * (self.lv / 100) + self.lv + 10
-        self.pdefence_speciale = (2*self.defence_special) * (self.lv / 100) + self.lv + 10
-        self.pvitesse = (2*self.vitesse) * (self.lv / 100) + self.lv + 10
+        with open(f"{self.name}.json","r") as pok:
+            self.pv = (2*pok["PV"]) * (self.lv / 100) + self.lv + 10
+            self.attaque = (2*pok["Attaque"]) * (self.lv / 100) + self.lv + 10
+            self.defense = (2*pok["Defense"]) * (self.lv / 100) + self.lv + 10
+            self.attaque_special = (2*pok["Attaque_Speciale"]) * (self.lv / 100) + self.lv + 10
+            self.defence_special = (2*pok["Defense_Speciale"]) * (self.lv / 100) + self.lv + 10
+            self.vitesse = (2*pok["Vitesse"]) * (self.lv / 100) + self.lv + 10
 
     def xp_gains(self,xpadd):
         self.xp += xpadd

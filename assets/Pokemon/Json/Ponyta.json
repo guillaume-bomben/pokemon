@@ -1,0 +1,15 @@
+{
+  "Name": "Ponyta",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 85,
+    "Defense": 55,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 65,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

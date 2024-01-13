@@ -23,7 +23,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            combat.gerer_evenements(event)  # Gérer les événements pour le combat
+            #combat.gerer_evenements(event)  # Gérer les événements pour le combat
 
         combat.update()
         combat.afficher()  # Afficher l'écran de combat

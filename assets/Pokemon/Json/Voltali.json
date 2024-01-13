@@ -1,0 +1,15 @@
+{
+  "Name": "Voltali",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 65,
+    "Defense": 60,
+    "Attaque_Speciale": 110,
+    "Defense_Speciale": 95,
+    "Vitesse": 130
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  }
+}

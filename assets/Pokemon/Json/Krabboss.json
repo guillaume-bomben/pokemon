@@ -1,0 +1,15 @@
+{
+  "Name": "Krabboss",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 130,
+    "Defense": 115,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 50,
+    "Vitesse": 75
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

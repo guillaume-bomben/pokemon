@@ -1,0 +1,15 @@
+{
+  "Name": "Nidoking",
+  "Stat": {
+    "PV": 81,
+    "Attaque": 92,
+    "Defense": 77,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 75,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "Sol"
+  }
+}

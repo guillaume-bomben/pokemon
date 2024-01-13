@@ -1,0 +1,15 @@
+{
+  "Name": "Doduo",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 85,
+    "Defense": 45,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 35,
+    "Vitesse": 75
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

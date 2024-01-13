@@ -1,0 +1,15 @@
+{
+  "Name": "Dracaufeu",
+  "Stat": {
+    "PV": 78,
+    "Attaque": 84,
+    "Defense": 78,
+    "Attaque_Speciale": 109,
+    "Defense_Speciale": 85,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "Vol"
+  }
+}

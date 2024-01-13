@@ -1,0 +1,15 @@
+{
+  "Name": "Tetarte",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 65,
+    "Defense": 65,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 50,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

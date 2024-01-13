@@ -1,0 +1,15 @@
+{
+  "Name": "Rhinoferos",
+  "Stat": {
+    "PV": 105,
+    "Attaque": 130,
+    "Defense": 120,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 45,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "Roche"
+  }
+}

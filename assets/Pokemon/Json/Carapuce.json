@@ -1,0 +1,15 @@
+{
+  "Name": "Carapuce",
+  "Stat": {
+    "PV": 44,
+    "Attaque": 48,
+    "Defense": 65,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 64,
+    "Vitesse": 43
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Fantominus",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 35,
+    "Defense": 30,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 35,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Spectre",
+    "Type2": "Poison"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Feunard",
+  "Stat": {
+    "PV": 73,
+    "Attaque": 76,
+    "Defense": 75,
+    "Attaque_Speciale": 81,
+    "Defense_Speciale": 100,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

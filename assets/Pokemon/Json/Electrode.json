@@ -1,0 +1,15 @@
+{
+  "Name": "Electrode",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 50,
+    "Defense": 70,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 140
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  }
+}

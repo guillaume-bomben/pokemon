@@ -1,0 +1,15 @@
+{
+  "Name": "Aspicot",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 35,
+    "Defense": 30,
+    "Attaque_Speciale": 20,
+    "Defense_Speciale": 20,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  }
+}

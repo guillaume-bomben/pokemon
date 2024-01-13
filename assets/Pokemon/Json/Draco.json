@@ -1,0 +1,15 @@
+{
+  "Name": "Draco",
+  "Stat": {
+    "PV": 61,
+    "Attaque": 84,
+    "Defense": 65,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 70,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "None"
+  }
+}

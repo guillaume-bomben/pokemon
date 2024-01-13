@@ -1,0 +1,15 @@
+{
+  "Name": "Coconfort",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 25,
+    "Defense": 50,
+    "Attaque_Speciale": 25,
+    "Defense_Speciale": 25,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  }
+}

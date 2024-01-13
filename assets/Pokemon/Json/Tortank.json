@@ -1,0 +1,15 @@
+{
+  "Name": "Tortank",
+  "Stat": {
+    "PV": 79,
+    "Attaque": 83,
+    "Defense": 100,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 105,
+    "Vitesse": 78
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

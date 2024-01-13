@@ -1,0 +1,15 @@
+{
+  "Name": "Aquali",
+  "Stat": {
+    "PV": 130,
+    "Attaque": 65,
+    "Defense": 60,
+    "Attaque_Speciale": 110,
+    "Defense_Speciale": 95,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

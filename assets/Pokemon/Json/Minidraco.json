@@ -1,0 +1,15 @@
+{
+  "Name": "Minidraco",
+  "Stat": {
+    "PV": 41,
+    "Attaque": 64,
+    "Defense": 45,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 50,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Lamantine",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 70,
+    "Defense": 80,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 95,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Glace"
+  }
+}

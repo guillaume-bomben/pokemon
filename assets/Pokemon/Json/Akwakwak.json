@@ -1,0 +1,15 @@
+{
+  "Name": "Akwakwak",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 82,
+    "Defense": 78,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 80,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Dardargnan",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 80,
+    "Defense": 40,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 80,
+    "Vitesse": 75
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  }
+}

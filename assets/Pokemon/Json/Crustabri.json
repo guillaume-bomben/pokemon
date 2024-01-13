@@ -1,0 +1,15 @@
+{
+  "Name": "Crustabri",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 95,
+    "Defense": 180,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 45,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Glace"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Dodrio",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 110,
+    "Defense": 70,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 60,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

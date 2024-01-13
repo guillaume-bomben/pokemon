@@ -1,0 +1,15 @@
+{
+  "Name": "Lokhlass",
+  "Stat": {
+    "PV": 130,
+    "Attaque": 85,
+    "Defense": 80,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 95,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Glace"
+  }
+}

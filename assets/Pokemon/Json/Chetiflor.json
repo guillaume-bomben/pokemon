@@ -1,0 +1,15 @@
+{
+  "Name": "Chetiflor",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 75,
+    "Defense": 35,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 30,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

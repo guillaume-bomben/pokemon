@@ -1,0 +1,15 @@
+{
+  "Name": "Ortide",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 65,
+    "Defense": 70,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 75,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

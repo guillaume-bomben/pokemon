@@ -1,0 +1,15 @@
+{
+  "Name": "Ptera",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 105,
+    "Defense": 65,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 75,
+    "Vitesse": 130
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Vol"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Boustiflor",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 90,
+    "Defense": 50,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 45,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

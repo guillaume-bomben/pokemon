@@ -1,0 +1,15 @@
+{
+  "Name": "Mackogneur",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 130,
+    "Defense": 80,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 85,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}
