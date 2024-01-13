@@ -1,4 +1,3 @@
-import csv
 from pokemon import pokemon
 import random
 import pygame
