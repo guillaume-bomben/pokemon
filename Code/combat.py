@@ -18,6 +18,8 @@ class Combat:
         self.vert = (0, 255, 0)
         self.blanc = (255, 255, 255)
         self.noir = (0, 0, 0)
+        self.longeur_life_player = 168
+        self.longeur_life_ennemy = 168
 
         self.ecran = pygame.display.set_mode((800, 600))
 
@@ -31,11 +33,11 @@ class Combat:
         self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         
         # Dessiner la barre de vie du joueur
-        pygame.draw.rect(self.ecran, self.vert, (571, 428, 168, 13))
+        pygame.draw.rect(self.ecran, self.vert, (571, 428, self.longeur_life_player, 13))
         pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
         # Dessiner la barre de vie de l'adversaire
-        pygame.draw.rect(self.ecran, self.vert, (131,140, 168, 12))
+        pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
         pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
         
 
