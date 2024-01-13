@@ -24,13 +24,8 @@ class Combat:
         self.position_joueur = (45, 280)  # Position du joueur
         self.position_adversaire = (470, 140)  # Position de l'adversaire
         
-        with open("pokemon_liste.csv", "r") as file:
-            reader = csv.reader(file)
-            for row in reader:
-                if row[0] == PpokName:
-                    player = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
-                if row[0] == EpokName:
-                    ennemy = pokemon(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8])
+        player = pokemon(PpokName)
+        ennemy = pokemon(EpokName)
         
         self.player = player
         self.ennemy = ennemy
