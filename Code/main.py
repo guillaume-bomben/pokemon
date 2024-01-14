@@ -11,10 +11,11 @@ def main():
     # Boucle de jeu
     running = True
     while running:
-        for event in pygame.event.get():
+        events = pygame.event.get()
+        for event in events:
             if event.type == pygame.QUIT:
                 running = False
-            #combat.gerer_evenements(event)  # Gérer les événements pour le combat
+        combat.gerer_evenements(events)  # Gérer les événements pour le combat
 
         combat.afficher()  
         combat.afficher_menu()

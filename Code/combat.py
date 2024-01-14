@@ -33,13 +33,18 @@ class Combat:
         self.ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
         self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         
+        pourcentage_vie_joueur = (self.player.pv / self.player.pvmax) if self.player.pvmax > 0 else 0
+        self.longeur_life_player = int(168 * pourcentage_vie_joueur)
         # Dessiner la barre de vie du joueur
         pygame.draw.rect(self.ecran, self.vert, (571, 428, self.longeur_life_player, 13))
         pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
+        pourcentage_vie_ennemy = (self.ennemy.pv / self.ennemy.pvmax) if self.ennemy.pvmax > 0 else 0
+        self.longeur_life_ennemy = int(168 * pourcentage_vie_ennemy)
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
         pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
+
 
     def afficher_menu(self):
         batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
@@ -55,26 +60,43 @@ class Combat:
             text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
             self.ecran.blit(text_surface, text_rect)
 
-'''    def attaquer(self):
-        if self.tour_joueur:
-            self.ennemy.ppv = int(self.ennemy.ppv)
-            self.ennemy.ppv -= 20
-            self.tour_joueur = False
-            self.afficher_menu = False
 
+    def utiliser_capacite(self, capacite_key):
+        power_capacite = self.attacks_player[capacite_key]["power"]
+        capacite_type = self.attacks_player[capacite_key]["tcap"]
+        if self.tour_joueur:
+            attaquant = self.player
+            defenseur = self.ennemy
+        else:
+            attaquant = self.ennemy
+            defenseur = self.player
+        if capacite_type == "physique":
+            degats = int((((((attaquant.lv * 0.4 + 2) * attaquant.attaque * power_capacite) / defenseur.defense) / 50) + 2))
+        elif capacite_type == "special":
+            degats = int((((((attaquant.lv * 0.4 + 2) * attaquant.attaque_special * power_capacite) / defenseur.defence_special) / 50) + 2))
+            
+        defenseur.pv -= degats
+        # Limiter la vie minimale à 0
+        if defenseur.pv < 0:
+            defenseur.pv = 0
+        print(f"{degats}")
+        # Inverser le tour
+        #self.tour_joueur = not self.tour_joueur
     
-    def attaquer_adversaire(self):
-        # Simuler une attaque de l'adversaire (pour l'exemple, cela réduit de manière aléatoire la vie du joueur)
-        if int(self.player.ppv) > 0:  # Vérifier si le joueur est toujours en vie
-            degats = random.randint(10, 25)  # Dégâts aléatoires pour l'attaque de l'adversaire
-            self.player.ppv = int(self.ennemy.ppv)
-            self.player.ppv -= degats  # Réduire les points de vie du joueur
-            self.tour_joueur = True  # Passer au tour du joueur
-        
-    def gerer_evenements(self, event):
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            mouse_x, mouse_y = pygame.mouse.get_pos()
-            if self.afficher_menu:
-                if self.bouton_attaque_pos[0] <= mouse_x <= self.bouton_attaque_pos[0] + self.bouton_attaque_pos[2] \
-                        and self.bouton_attaque_pos[1] <= mouse_y <= self.bouton_attaque_pos[1] + self.bouton_attaque_pos[3]:
-                    self.attaquer()'''
+    def gerer_evenements(self, events):
+        for event in events:
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                # Vérifier si les coordonnées du clic sont sur un bouton capacité
+                if 85 <= x <= 350 and 495 <= y <= 545:
+                    self.utiliser_capacite("atk1")
+                    print("cap 1")
+                elif 85 <= x <= 350 and 550 <= y <= 600:
+                    self.utiliser_capacite("atk2")
+                    print("cap 2")
+                elif 440 <= x <= 705 and 495 <= y <= 545:
+                    self.utiliser_capacite("atk3")
+                    print("cap 3")
+                elif 440 <= x <= 705 and 550 <= y <= 600:
+                    self.utiliser_capacite("atk4")
+                    print("cap 4")

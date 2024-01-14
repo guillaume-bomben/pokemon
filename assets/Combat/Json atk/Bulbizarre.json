@@ -1,14 +1,14 @@
 {
     "atk1" : {
-        "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100
+        "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
     } ,
     "atk2" : {
-        "Name" : "Fouet Lianes" , "type" : "Plante" , "power" : 45 , "precision" : 100
+        "Name" : "Fouet Lianes" , "type" : "Plante" , "power" : 45 , "precision" : 100 , "tcap" : "physique"
     } ,
     "atk3" : {
-        "Name" : "Tranch'Herbe" , "type" : "Plante" , "power" : 55 , "precision" : 95
+        "Name" : "Tranch'Herbe" , "type" : "Plante" , "power" : 55 , "precision" : 95 , "tcap" : "physique"
     } ,
     "atk4" : {
-        "Name" : "Canon Graine" , "type" : "Plante" , "power" : 80 , "precision" : 100
+        "Name" : "Canon Graine" , "type" : "Plante" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
     } 
 }

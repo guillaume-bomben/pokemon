@@ -11,6 +11,7 @@ class pokemon:
             self.type2 = data["Type"]["Type2"]
 
             if lv == 1:
+                self.pvmax = data["Stat"]["PV"]
                 self.pv = data["Stat"]["PV"]
                 self.attaque = data["Stat"]["Attaque"]
                 self.defense = data["Stat"]["Defense"]
@@ -26,6 +27,7 @@ class pokemon:
     def recalcul_stat(self):
         with open(f"assets/Pokemon/Json/{self.name}.json","r") as pok:
             data = json.load(pok)  # Chargez le contenu du fichier JSON
+            self.pvmax = (2*data["Stat"]["PV"]) * (self.lv / 100) + self.lv + 10
             self.pv = (2*data["Stat"]["PV"]) * (self.lv / 100) + self.lv + 10
             self.attaque = (2*data["Stat"]["Attaque"]) * (self.lv / 100) + self.lv + 10
             self.defense = (2*data["Stat"]["Defense"]) * (self.lv / 100) + self.lv + 10
