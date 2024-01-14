@@ -5,10 +5,8 @@ import pygame
 class Combat:
     def __init__(self,PpokName,EpokName):
         self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')  
-        Ijoueur = pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png')
-        self.joueur = pygame.transform.scale(Ijoueur,(250,250))
-        Iadversaire = pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') 
-        self.adversaire = pygame.transform.scale(Iadversaire,(250,250))
+        self.joueur = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
+        self.adversaire = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
         self.position_joueur = (45, 280)
         self.position_adversaire = (470, 140)
         
@@ -24,12 +22,10 @@ class Combat:
         self.ecran = pygame.display.set_mode((800, 600))
 
         self.tour_joueur = True
-        #self.afficher_menu = True
         self.font = pygame.font.Font(None, 36)
         with open(f'assets/Combat/Json atk/{PpokName}.json', 'r') as file:
             self.attacks_player = json.load(file)
-        '''with open(f'assets/Combat/Json atk/{EpokName}.json', 'r') as file:
-            self.attacks_ennemy = json.load(file)'''
+
 
 
     def afficher(self):
