@@ -1,0 +1,14 @@
+{
+    "atk1" : {
+        "Name" : "Charge" , "type" : "normal" , "power" : 40 , "precision" : 100
+    } ,
+    "atk2" : {
+        "Name" : "Fouet Lianes" , "type" : "plante" , "power" : 45 , "precision" : 100
+    } ,
+    "atk3" : {
+        "Name" : "Tranch'Herbe" , "type" : "plante" , "power" : 55 , "precision" : 95
+    } ,
+    "atk4" : {
+        "Name" : "Canon Graine" , "type" : "plante" , "power" : 80 , "precision" : 100
+    } 
+}

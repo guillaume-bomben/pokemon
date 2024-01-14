@@ -1,0 +1,14 @@
+{
+    "atk1" : {
+        "Name" : "Griffe" , "type" : "normal" , "power" : 40 , "precision" : 100
+    } ,
+    "atk2" : {
+        "Name" : "Flammeche" , "type" : "feu" , "power" : 40 , "precision" : 100
+    } ,
+    "atk3" : {
+        "Name" : "Draco-Souffle" , "type" : "dragon" , "power" : 60 , "precision" : 100
+    } ,
+    "atk4" : {
+        "Name" : "Crocs Feu" , "type" : "feu" , "power" : 65 , "precision" : 95
+    } 
+}

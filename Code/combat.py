@@ -1,10 +1,10 @@
+import json
 from pokemon import pokemon
-import random
 import pygame
 
 class Combat:
     def __init__(self,PpokName,EpokName):
-        self.fond = pygame.image.load('assets/Combat/Combat Background.png')  
+        self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')  
         Ijoueur = pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png')
         self.joueur = pygame.transform.scale(Ijoueur,(250,250))
         Iadversaire = pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') 
@@ -24,7 +24,12 @@ class Combat:
         self.ecran = pygame.display.set_mode((800, 600))
 
         self.tour_joueur = True
-        self.afficher_menu = True
+        #self.afficher_menu = True
+        self.font = pygame.font.Font(None, 36)
+        with open(f'assets/Combat/Json atk/{PpokName}.json', 'r') as file:
+            self.attacks_player = json.load(file)
+        '''with open(f'assets/Combat/Json atk/{EpokName}.json', 'r') as file:
+            self.attacks_ennemy = json.load(file)'''
 
 
     def afficher(self):
@@ -39,9 +44,22 @@ class Combat:
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
         pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
-        
 
-    def attaquer(self):
+    def afficher_menu(self):
+        batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
+        batk = pygame.transform.scale(batk,(265,50))
+        self.ecran.blit(batk,(85,495))
+        self.ecran.blit(batk,(85,550))
+        self.ecran.blit(batk,(440,495))
+        self.ecran.blit(batk,(440,550))
+        
+        for i, attack_key in enumerate(self.attacks_player.keys()):
+            attack_name = self.attacks_player[attack_key]["Name"]
+            text_surface = self.font.render(attack_name, True, (0, 0, 0))
+            text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
+            self.ecran.blit(text_surface, text_rect)
+
+'''    def attaquer(self):
         if self.tour_joueur:
             self.ennemy.ppv = int(self.ennemy.ppv)
             self.ennemy.ppv -= 20
@@ -63,4 +81,4 @@ class Combat:
             if self.afficher_menu:
                 if self.bouton_attaque_pos[0] <= mouse_x <= self.bouton_attaque_pos[0] + self.bouton_attaque_pos[2] \
                         and self.bouton_attaque_pos[1] <= mouse_y <= self.bouton_attaque_pos[1] + self.bouton_attaque_pos[3]:
-                    self.attaquer()
+                    self.attaquer()'''

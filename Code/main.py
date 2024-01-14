@@ -7,7 +7,7 @@ pygame.init()
 blanc = (255, 255, 255)
 
 def main():
-    combat = Combat("Reptincel","Florizarre")
+    combat = Combat("Salameche","Bulbizarre")
     # Boucle de jeu
     running = True
     while running:
@@ -17,6 +17,7 @@ def main():
             #combat.gerer_evenements(event)  # Gérer les événements pour le combat
 
         combat.afficher()  
+        combat.afficher_menu()
         pygame.display.flip() 
 
     pygame.quit()
