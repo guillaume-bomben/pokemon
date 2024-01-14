@@ -1,0 +1,21 @@
+{
+    "Acier" : 1,
+    "Combat" : 1,
+    "Dragon" : 1,
+    "Eau" : 1,
+    "Electrik" : 1,
+    "Fee" : 1,
+    "Feu" : 1,
+    "Glace" : 1,
+    "Insecte" : 1,
+    "Normal" : 0,
+    "Plante" :1 ,
+    "Poison" : 1,
+    "Psy" : 2,
+    "Roche" : 1,
+    "Sol" : 1,
+    "Spectre" : 2,
+    "Tenebres" : 0.5,
+    "Vol" : 1,
+    "None" : 1
+}
