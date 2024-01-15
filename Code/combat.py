@@ -1,6 +1,5 @@
 import json
 import random
-import sys
 from pokemon import pokemon
 import pygame
 
