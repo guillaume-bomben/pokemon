@@ -1,0 +1,15 @@
+{
+  "Name": "Magneton",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 60,
+    "Defense": 95,
+    "Attaque_Speciale": 120,
+    "Defense_Speciale": 70,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "Acier"
+  }
+}

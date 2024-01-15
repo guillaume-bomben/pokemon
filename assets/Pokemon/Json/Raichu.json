@@ -1,0 +1,15 @@
+{
+  "Name": "Raichu",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 90,
+    "Defense": 55,
+    "Attaque_Speciale": 90,
+    "Defense_Speciale": 80,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  }
+}

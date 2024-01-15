@@ -1,0 +1,15 @@
+{
+  "Name": "Sulfura",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 100,
+    "Defense": 90,
+    "Attaque_Speciale": 125,
+    "Defense_Speciale": 85,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "Vol"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Magicarpe",
+  "Stat": {
+    "PV": 20,
+    "Attaque": 10,
+    "Defense": 55,
+    "Attaque_Speciale": 15,
+    "Defense_Speciale": 20,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

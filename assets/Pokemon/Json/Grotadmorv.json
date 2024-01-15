@@ -1,0 +1,15 @@
+{
+  "Name": "Grotadmorv",
+  "Stat": {
+    "PV": 105,
+    "Attaque": 105,
+    "Defense": 75,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 100,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  }
+}

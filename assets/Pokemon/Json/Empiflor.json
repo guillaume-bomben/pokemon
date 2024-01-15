@@ -1,0 +1,15 @@
+{
+  "Name": "Empiflor",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 105,
+    "Defense": 65,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 60,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

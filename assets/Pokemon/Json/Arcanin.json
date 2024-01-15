@@ -1,0 +1,15 @@
+{
+  "Name": "Arcanin",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 110,
+    "Defense": 80,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 80,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

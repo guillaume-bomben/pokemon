@@ -1,0 +1,15 @@
+{
+  "Name": "Mimitoss",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 55,
+    "Defense": 50,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 55,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Magmar",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 95,
+    "Defense": 57,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 85,
+    "Vitesse": 93
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

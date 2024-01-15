@@ -1,0 +1,15 @@
+{
+  "Name": "Leviator",
+  "Stat": {
+    "PV": 95,
+    "Attaque": 125,
+    "Defense": 79,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 100,
+    "Vitesse": 81
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Vol"
+  }
+}

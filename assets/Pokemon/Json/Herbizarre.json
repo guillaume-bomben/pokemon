@@ -1,0 +1,15 @@
+{
+  "Name": "Herbizarre",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 62,
+    "Defense": 63,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

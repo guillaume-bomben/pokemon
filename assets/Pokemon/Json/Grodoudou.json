@@ -1,0 +1,15 @@
+{
+  "Name": "Grodoudou",
+  "Stat": {
+    "PV": 140,
+    "Attaque": 70,
+    "Defense": 45,
+    "Attaque_Speciale": 75,
+    "Defense_Speciale": 50,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Fee"
+  }
+}

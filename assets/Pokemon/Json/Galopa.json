@@ -1,0 +1,15 @@
+{
+  "Name": "Galopa",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 100,
+    "Defense": 70,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

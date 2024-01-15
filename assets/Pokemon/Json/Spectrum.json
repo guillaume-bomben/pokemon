@@ -1,0 +1,15 @@
+{
+  "Name": "Spectrum",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 50,
+    "Defense": 45,
+    "Attaque_Speciale": 115,
+    "Defense_Speciale": 55,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Spectre",
+    "Type2": "Poison"
+  }
+}

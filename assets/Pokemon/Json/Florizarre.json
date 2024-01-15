@@ -1,0 +1,15 @@
+{
+  "Name": "Florizarre",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 82,
+    "Defense": 83,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 100,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Pyroli",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 130,
+    "Defense": 60,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 110,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

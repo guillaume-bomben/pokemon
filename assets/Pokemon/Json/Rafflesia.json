@@ -1,0 +1,15 @@
+{
+  "Name": "Rafflesia",
+  "Stat": {
+    "PV": 75,
+    "Attaque": 80,
+    "Defense": 85,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 90,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

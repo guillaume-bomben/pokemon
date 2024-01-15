@@ -1,0 +1,15 @@
+{
+  "Name": "Lippoutou",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 50,
+    "Defense": 35,
+    "Attaque_Speciale": 115,
+    "Defense_Speciale": 95,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Glace",
+    "Type2": "Psy"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Ectoplasma",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 65,
+    "Defense": 60,
+    "Attaque_Speciale": 130,
+    "Defense_Speciale": 75,
+    "Vitesse": 110
+  },
+  "Type": {
+    "Type1": "Spectre",
+    "Type2": "Poison"
+  }
+}

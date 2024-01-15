@@ -1,0 +1,15 @@
+{
+  "Name": "Melodelfe",
+  "Stat": {
+    "PV": 95,
+    "Attaque": 70,
+    "Defense": 73,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 90,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Fee",
+    "Type2": "None"
+  }
+}

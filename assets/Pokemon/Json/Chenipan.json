@@ -1,0 +1,15 @@
+{
+  "Name": "Chenipan",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 30,
+    "Defense": 35,
+    "Attaque_Speciale": 20,
+    "Defense_Speciale": 20,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "None"
+  }
+}

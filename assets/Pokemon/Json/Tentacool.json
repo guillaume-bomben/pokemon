@@ -1,0 +1,15 @@
+{
+  "Name": "Tentacool",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 40,
+    "Defense": 35,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 100,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Poison"
+  }
+}

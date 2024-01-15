@@ -1,0 +1,15 @@
+{
+  "Name": "Hypnomade",
+  "Stat": {
+    "PV": 85,
+    "Attaque": 73,
+    "Defense": 70,
+    "Attaque_Speciale": 73,
+    "Defense_Speciale": 115,
+    "Vitesse": 67
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

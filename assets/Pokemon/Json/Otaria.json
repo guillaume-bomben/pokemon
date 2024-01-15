@@ -1,0 +1,15 @@
+{
+  "Name": "Otaria",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 45,
+    "Defense": 55,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 70,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

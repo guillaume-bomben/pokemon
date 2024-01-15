@@ -1,0 +1,15 @@
+{
+  "Name": "Ronflex",
+  "Stat": {
+    "PV": 160,
+    "Attaque": 110,
+    "Defense": 65,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 110,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

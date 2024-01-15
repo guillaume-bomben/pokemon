@@ -1,0 +1,15 @@
+{
+  "Name": "Roucool",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 45,
+    "Defense": 40,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 35,
+    "Vitesse": 56
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

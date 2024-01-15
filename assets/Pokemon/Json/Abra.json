@@ -1,0 +1,15 @@
+{
+  "Name": "Abra",
+  "Stat": {
+    "PV": 25,
+    "Attaque": 20,
+    "Defense": 15,
+    "Attaque_Speciale": 105,
+    "Defense_Speciale": 55,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

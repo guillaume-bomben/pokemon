@@ -1,0 +1,15 @@
+{
+  "Name": "Carabaffe",
+  "Stat": {
+    "PV": 59,
+    "Attaque": 63,
+    "Defense": 80,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 80,
+    "Vitesse": 58
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

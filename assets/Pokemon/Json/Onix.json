@@ -1,0 +1,15 @@
+{
+  "Name": "Onix",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 45,
+    "Defense": 160,
+    "Attaque_Speciale": 30,
+    "Defense_Speciale": 45,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Sol"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Mewtwo",
+  "Stat": {
+    "PV": 106,
+    "Attaque": 110,
+    "Defense": 90,
+    "Attaque_Speciale": 154,
+    "Defense_Speciale": 90,
+    "Vitesse": 130
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Grolem",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 110,
+    "Defense": 130,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 65,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Sol"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Kokiyas",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 65,
+    "Defense": 100,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 25,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

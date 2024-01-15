@@ -1,0 +1,15 @@
+{
+  "Name": "Papilusion",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 45,
+    "Defense": 50,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Vol"
+  }
+}

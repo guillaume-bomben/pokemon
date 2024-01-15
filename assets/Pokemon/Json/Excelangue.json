@@ -1,0 +1,15 @@
+{
+  "Name": "Excelangue",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 55,
+    "Defense": 75,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 75,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Mew",
+  "Stat": {
+    "PV": 100,
+    "Attaque": 100,
+    "Defense": 100,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 100,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

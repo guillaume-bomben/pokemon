@@ -1,0 +1,15 @@
+{
+  "Name": "Nidoqueen",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 82,
+    "Defense": 87,
+    "Attaque_Speciale": 75,
+    "Defense_Speciale": 85,
+    "Vitesse": 76
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "Sol"
+  }
+}

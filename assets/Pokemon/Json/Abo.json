@@ -1,0 +1,15 @@
+{
+  "Name": "Abo",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 60,
+    "Defense": 44,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 54,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  }
+}

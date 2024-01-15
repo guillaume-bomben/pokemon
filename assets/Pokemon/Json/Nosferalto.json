@@ -1,0 +1,15 @@
+{
+  "Name": "Nosferalto",
+  "Stat": {
+    "PV": 75,
+    "Attaque": 80,
+    "Defense": 70,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 75,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "Vol"
+  }
+}

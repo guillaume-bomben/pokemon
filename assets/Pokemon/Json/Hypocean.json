@@ -1,0 +1,15 @@
+{
+  "Name": "Hypocean",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 65,
+    "Defense": 95,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 45,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

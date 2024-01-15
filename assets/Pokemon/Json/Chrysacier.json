@@ -1,0 +1,15 @@
+{
+  "Name": "Chrysacier",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 20,
+    "Defense": 55,
+    "Attaque_Speciale": 25,
+    "Defense_Speciale": 25,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Kabuto",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 80,
+    "Defense": 90,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 45,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Eau"
+  }
+}

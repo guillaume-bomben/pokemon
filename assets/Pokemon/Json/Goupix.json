@@ -1,0 +1,15 @@
+{
+  "Name": "Goupix",
+  "Stat": {
+    "PV": 38,
+    "Attaque": 41,
+    "Defense": 40,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 65,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Stari",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 45,
+    "Defense": 55,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 55,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Bulbizarre",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 49,
+    "Defense": 49,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 65,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  }
+}

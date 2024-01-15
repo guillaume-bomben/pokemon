@@ -1,0 +1,15 @@
+{
+  "Name": "Kabutops",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 115,
+    "Defense": 105,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 70,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Eau"
+  }
+}

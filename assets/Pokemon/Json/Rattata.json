@@ -1,0 +1,15 @@
+{
+  "Name": "Rattata",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 56,
+    "Defense": 35,
+    "Attaque_Speciale": 25,
+    "Defense_Speciale": 35,
+    "Vitesse": 72
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

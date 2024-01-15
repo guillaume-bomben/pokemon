@@ -1,0 +1,15 @@
+{
+  "Name": "Saquedeneu",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 55,
+    "Defense": 115,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 40,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "None"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Hypotrempe",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 40,
+    "Defense": 70,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 25,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}

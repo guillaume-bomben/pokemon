@@ -1,0 +1,15 @@
+{
+  "Name": "Kadabra",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 35,
+    "Defense": 30,
+    "Attaque_Speciale": 120,
+    "Defense_Speciale": 70,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  }
+}

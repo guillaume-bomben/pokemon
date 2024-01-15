@@ -1,0 +1,15 @@
+{
+  "Name": "Roucarnage",
+  "Stat": {
+    "PV": 83,
+    "Attaque": 80,
+    "Defense": 75,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 70,
+    "Vitesse": 91
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

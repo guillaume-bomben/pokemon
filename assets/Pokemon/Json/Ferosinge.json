@@ -1,0 +1,15 @@
+{
+  "Name": "Ferosinge",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 80,
+    "Defense": 35,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 45,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}

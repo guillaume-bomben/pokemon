@@ -1,0 +1,15 @@
+{
+  "Name": "Poissoroy",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 92,
+    "Defense": 65,
+    "Attaque_Speciale": 65,
+    "Defense_Speciale": 80,
+    "Vitesse": 68
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  }
+}
