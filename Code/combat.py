@@ -1,4 +1,6 @@
 import json
+import random
+import sys
 from pokemon import pokemon
 import pygame
 
@@ -25,7 +27,20 @@ class Combat:
         self.font = pygame.font.Font(None, 36)
         with open(f'assets/Combat/Json atk/{PpokName}.json', 'r') as file:
             self.attacks_player = json.load(file)
+        with open(f'assets/Combat/Json atk/{EpokName}.json', 'r') as file2:
+            self.attacks_ennemy = json.load(file2)
 
+        running = True
+        while running:
+            events = pygame.event.get()
+            for event in events:
+                if event.type == pygame.QUIT:
+                    running = False
+            self.gerer_evenements(events)  # Gérer les événements pour le combat
+
+            self.afficher()  
+            self.afficher_menu()
+            pygame.display.flip() 
 
 
     def afficher(self):
@@ -62,41 +77,64 @@ class Combat:
 
 
     def utiliser_capacite(self, capacite_key):
-        power_capacite = self.attacks_player[capacite_key]["power"]
-        capacite_type = self.attacks_player[capacite_key]["tcap"]
-        if self.tour_joueur:
+        if self.tour_joueur :
+            power_capacite = self.attacks_player[capacite_key]["power"]
+            capacite_type = self.attacks_player[capacite_key]["tcap"]
+            precision = self.attacks_player[capacite_key]["precision"]
+            atk_type = self.attacks_player[capacite_key]["type"]
+            
             attaquant = self.player
             defenseur = self.ennemy
         else:
+            power_capacite = self.attacks_ennemy[capacite_key]["power"]
+            capacite_type = self.attacks_ennemy[capacite_key]["tcap"]
+            precision = self.attacks_ennemy[capacite_key]["precision"]
+            atk_type = self.attacks_ennemy[capacite_key]["type"]
+            
             attaquant = self.ennemy
             defenseur = self.player
-        if capacite_type == "physique":
-            degats = int((((((attaquant.lv * 0.4 + 2) * attaquant.attaque * power_capacite) / defenseur.defense) / 50) + 2))
-        elif capacite_type == "special":
-            degats = int((((((attaquant.lv * 0.4 + 2) * attaquant.attaque_special * power_capacite) / defenseur.defence_special) / 50) + 2))
+
+        if precision >= random.randint(0,100):
+            if capacite_type == "physique":
+                degats = int((((((attaquant.lv * 0.4 + 2) * attaquant.attaque * power_capacite) / defenseur.defense) / 50) + 2))
+            elif capacite_type == "special":
+                degats = int((((((attaquant.lv * 0.4 + 2) *attaquant.attaque_special * power_capacite) / defenseur.defence_special) / 50) + 2))
             
-        defenseur.pv -= degats
-        # Limiter la vie minimale à 0
-        if defenseur.pv < 0:
-            defenseur.pv = 0
-        print(f"{degats}")
-        # Inverser le tour
-        #self.tour_joueur = not self.tour_joueur
-    
+            with open(f"assets/Combat/Json res/{atk_type}.json") as f:
+                file = json.load(f)
+                multiplicateur = file[defenseur.type1] * file[defenseur.type2]
+                print(f"multiplicateur : {multiplicateur}")
+            defenseur.pv -= degats * multiplicateur
+            # Limiter la vie minimale à 0
+            if defenseur.pv < 0:
+                defenseur.pv = 0
+            print(f"{degats * multiplicateur}")
+        else:
+            print("La capaciter a rater")
+        self.tour_joueur = not self.tour_joueur
+
+
     def gerer_evenements(self, events):
         for event in events:
             if event.type == pygame.MOUSEBUTTONDOWN:
+                rand = random.randint(1,4)
                 x, y = pygame.mouse.get_pos()
                 # Vérifier si les coordonnées du clic sont sur un bouton capacité
                 if 85 <= x <= 350 and 495 <= y <= 545:
                     self.utiliser_capacite("atk1")
+                    self.utiliser_capacite(f"atk{rand}")
                     print("cap 1")
                 elif 85 <= x <= 350 and 550 <= y <= 600:
                     self.utiliser_capacite("atk2")
+                    self.utiliser_capacite(f"atk{rand}")
                     print("cap 2")
                 elif 440 <= x <= 705 and 495 <= y <= 545:
                     self.utiliser_capacite("atk3")
                     print("cap 3")
                 elif 440 <= x <= 705 and 550 <= y <= 600:
                     self.utiliser_capacite("atk4")
+                    self.utiliser_capacite(f"atk{rand}")
                     print("cap 4")
+    
+    #def win(self):
+        
