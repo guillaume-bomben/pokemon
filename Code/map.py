@@ -53,6 +53,8 @@ class Map:
             self.player.add_switchs(self.switchs)
             self.player.add_collisions(self.collisions)
             self.group.add(self.player)
+            if switch.name.split("_")[0] != "map":
+                self.player.switch_bike(True)
         
         self.current_map = switch
         
