@@ -17,6 +17,7 @@ class Player(Entity):
         self.change_map: Switch | None = None
 
     def update(self):
+        self.check_input()
         self.check_move()
         super().update()
 
@@ -70,3 +71,14 @@ class Player(Entity):
             if temp_hitbox.colliderect(collision):
                 return True
         return False
+    
+    def check_input(self):
+        if self.keylistener.key_pressed(pygame.K_b):
+            self.switch_bike()
+
+    def switch_bike(self):
+        if self.speed == 1:
+            self.speed = 2
+        else:
+            self.speed = 1
+        self.keylistener.remove_key(pygame.K_b)
