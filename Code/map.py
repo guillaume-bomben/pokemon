@@ -14,8 +14,8 @@ class Map:
         self.group = None
 
         self.player: Player | None = None
-
         self.switchs: list[Switch] | None = None
+        self.collisions: list[pygame.Rect] | None = None 
 
         self.current_map: Switch = Switch("switch", "map_0", pygame.Rect(0, 0, 0, 0), 0)
 
@@ -34,8 +34,11 @@ class Map:
             self.map_layer.zomm = 10
 
         self.switchs = []
+        self.collisions = []
 
         for obj in self.tmx_data.objects:
+            if obj.name == "collision":
+                self.collisions.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
             if obj.name:
                 type = obj.name.split(" ")[0]
                 if type == "switch":
@@ -48,6 +51,7 @@ class Map:
             self.player.align_hitbox()
             self.player.step = 16
             self.player.add_switchs(self.switchs)
+            self.player.add_collisions(self.collisions)
             self.group.add(self.player)
         
         self.current_map = switch
@@ -58,6 +62,7 @@ class Map:
         self.player = player
         self.player.align_hitbox()
         self.player.add_switchs(self.switchs)
+        self.player.add_collisions(self.collisions)
 
     def update(self):
         if self.player:

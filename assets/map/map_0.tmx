@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="11">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="31">
  <tileset firstgid="1" source="tileset/tileset_pokemon_sdk.tsx"/>
  <layer id="1" name="ground" width="100" height="100" locked="1">
   <data encoding="csv">
@@ -834,11 +834,19 @@
 </data>
  </layer>
  <group id="14" name="Objects">
-  <objectgroup id="16" name="Calque d'Objets 1">
+  <objectgroup id="16" name="Calque d'Objets 1" visible="0">
    <object id="6" name="switch pokecenter_0 0" x="224.282" y="79.736" width="16" height="16"/>
    <object id="10" name="spawn pokecenter_0 0" x="232.521" y="107.605">
     <point/>
    </object>
+  </objectgroup>
+  <objectgroup id="17" name="collisions">
+   <object id="22" name="collision" x="176" y="80" width="48" height="16"/>
+   <object id="23" name="collision" x="176" y="32" width="16" height="64"/>
+   <object id="25" name="collision" x="274.618" y="48" width="13.3821" height="51.8611"/>
+   <object id="26" name="collision" x="272" y="32" width="16" height="16"/>
+   <object id="28" name="collision" x="176" y="16" width="109.989" height="14.0067"/>
+   <object id="30" name="collision" x="240" y="80" width="48" height="16"/>
   </objectgroup>
  </group>
 </map>
