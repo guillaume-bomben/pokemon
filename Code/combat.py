@@ -16,7 +16,7 @@ class Combat:
         self.adversaire.rect.bottomright = (655, 325)
         
         #Sprite Joueur
-        joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))
+        joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))    
         self.joueur =  AnimatedSprite(joueur_image,125,125)
         self.joueur.rect.bottomleft = (125,475)
         
@@ -91,21 +91,29 @@ class Combat:
         adversaire_lv_rect = adversaire_lv_surface.get_rect(midbottom=(325, 135))
         self.ecran.blit(adversaire_lv_surface, adversaire_lv_rect)
 
-
-    def afficher_menu(self):
-        batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
-        batk = pygame.transform.scale(batk,(265,50))
-        self.ecran.blit(batk,(85,495))
-        self.ecran.blit(batk,(85,550))
-        self.ecran.blit(batk,(440,495))
-        self.ecran.blit(batk,(440,550))
-        
+    def afficher_menu(self, mouse_pos):
         for i, attack_key in enumerate(self.attacks_player.keys()):
             attack_name = self.attacks_player[attack_key]["Name"]
+            attack_type = self.attacks_player[attack_key]["type"]
+
+            # Vérifiez si la souris survole le bouton
+            button_rect = pygame.Rect(85 if i < 2 else 435, 495 if i % 2 == 0 else 550, 265, 50)
+            
+            if button_rect.collidepoint(mouse_pos):
+                # Si survolé, utilisez l'image de survol
+                attack_image = pygame.image.load(f"assets/Combat/Image/Batk {attack_type}.png")
+                attack_image = pygame.transform.scale(attack_image, (265, 50))
+                self.ecran.blit(attack_image, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+            else:
+                # Sinon, utilisez l'image normale
+                batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
+                batk = pygame.transform.scale(batk, (265, 50))
+                self.ecran.blit(batk, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+
+            # Affichez le texte
             text_surface = self.font.render(attack_name, True, (0, 0, 0))
             text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
             self.ecran.blit(text_surface, text_rect)
-
 
     def utiliser_capacite(self, capacite_key):
         if self.tour_joueur :
@@ -151,8 +159,9 @@ class Combat:
 
 
     def gerer_evenements(self, events):
-        self.afficher()  
-        self.afficher_menu()
+        self.afficher()
+        mouse_pos = pygame.mouse.get_pos()
+        self.afficher_menu(mouse_pos)
         for event in events:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 rand = random.randint(1,4)
@@ -162,22 +171,18 @@ class Combat:
                     self.utiliser_capacite("atk1")
                     if not self.win:
                         self.utiliser_capacite(f"atk{rand}")
-                    print("cap 1")
                 elif 85 <= x <= 350 and 550 <= y <= 600:
                     self.utiliser_capacite("atk2")
                     if not self.win:
                         self.utiliser_capacite(f"atk{rand}")
-                    print("cap 2")
                 elif 440 <= x <= 705 and 495 <= y <= 545:
                     self.utiliser_capacite("atk3")
                     if not self.win:
                         self.utiliser_capacite(f"atk{rand}")
-                    print("cap 3")
                 elif 440 <= x <= 705 and 550 <= y <= 600:
                     self.utiliser_capacite("atk4")
                     if not self.win:
                         self.utiliser_capacite(f"atk{rand}")
-                    print("cap 4")
 
     def fin_combat(self):
         self.ecran.blit(self.fond_win_or_loose,(0,0))
