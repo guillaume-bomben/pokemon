@@ -1,8 +1,6 @@
 import pygame
 import sys
 
-pygame.init()
-
 class AnimatedSprite:
     def __init__(self, image, frame_width, frame_height):
         self.frame_width, self.frame_height = frame_width, frame_height
