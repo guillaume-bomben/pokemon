@@ -8,23 +8,16 @@ class Combat:
     def __init__(self,PpokName,EpokName):
         clock = pygame.time.Clock()
         self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')  
-        #joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
-        #self.joueur = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
-        #adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
-        #self.adversaire = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
         
         #Sprite adversaire
-        adversaire_image = pygame.transform.scale(pygame.image.load(f'Code/35063.png') ,(1375,125))
-        self.adversaire = AnimatedSprite(adversaire_image,123,125)
-        self.adversaire.rect.topleft = (525, 180)
+        adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
+        self.adversaire = AnimatedSprite(adversaire_image,125,125)
+        self.adversaire.rect.bottomright = (655, 325)
         
         #Sprite Joueur
-        joueur_image = pygame.transform.scale(pygame.image.load(f"Code/player.png"), (1250,1375))
+        joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))
         self.joueur =  AnimatedSprite(joueur_image,125,125)
         self.joueur.rect.bottomleft = (125,475)
-        
-        #self.position_joueur = (45, 280)
-        #self.position_adversaire = (470, 140)
         
         self.player = pokemon(PpokName)
         self.ennemy = pokemon(EpokName)
@@ -60,8 +53,6 @@ class Combat:
 
     def afficher(self):
         self.ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
-        #self.ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
-        #self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
         self.joueur.update()
         self.joueur.draw(self.ecran)
         self.adversaire.update()
@@ -78,6 +69,24 @@ class Combat:
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
         pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
+        
+        # afficher le nom du joueur
+        joueur_name_surface = self.font.render(f"{self.player.name}", True, self.blanc)
+        joueur_name_rect = joueur_name_surface.get_rect(midbottom=(600, 425))
+        self.ecran.blit(joueur_name_surface, joueur_name_rect)
+        # afficher le niveau du joueur
+        joueur_lv_surface = self.font.render(f"{self.player.lv}", True, self.blanc)
+        joueur_lv_rect = joueur_lv_surface.get_rect(midbottom=(765, 425))
+        self.ecran.blit(joueur_lv_surface, joueur_lv_rect)
+
+        # afficher le nom de l'adversaire
+        adversaire_name_surface = self.font.render(f"{self.ennemy.name}", True, self.blanc)
+        adversaire_name_rect = adversaire_name_surface.get_rect(midbottom=(150, 135))
+        self.ecran.blit(adversaire_name_surface, adversaire_name_rect)
+        # afficher le niveau de l'adversaire
+        adversaire_lv_surface = self.font.render(f"{self.ennemy.lv}", True, self.blanc)
+        adversaire_lv_rect = adversaire_lv_surface.get_rect(midbottom=(325, 135))
+        self.ecran.blit(adversaire_lv_surface, adversaire_lv_rect)
 
 
     def afficher_menu(self):
@@ -154,6 +163,3 @@ class Combat:
                     self.utiliser_capacite("atk4")
                     self.utiliser_capacite(f"atk{rand}")
                     print("cap 4")
-    
-    #def win(self):
-        
