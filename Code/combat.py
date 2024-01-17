@@ -2,14 +2,29 @@ import json
 import random
 from pokemon import pokemon
 import pygame
+from AnimatedSprite import AnimatedSprite
 
 class Combat:
     def __init__(self,PpokName,EpokName):
+        clock = pygame.time.Clock()
         self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')  
-        self.joueur = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
-        self.adversaire = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
-        self.position_joueur = (45, 280)
-        self.position_adversaire = (470, 140)
+        #joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
+        #self.joueur = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'),(250,250))
+        #adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
+        #self.adversaire = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(250,250))
+        
+        #Sprite adversaire
+        adversaire_image = pygame.transform.scale(pygame.image.load(f'Code/35063.png') ,(1375,125))
+        self.adversaire = AnimatedSprite(adversaire_image,123,125)
+        self.adversaire.rect.topleft = (525, 180)
+        
+        #Sprite Joueur
+        joueur_image = pygame.transform.scale(pygame.image.load(f"Code/player.png"), (1250,1375))
+        self.joueur =  AnimatedSprite(joueur_image,125,125)
+        self.joueur.rect.bottomleft = (125,475)
+        
+        #self.position_joueur = (45, 280)
+        #self.position_adversaire = (470, 140)
         
         self.player = pokemon(PpokName)
         self.ennemy = pokemon(EpokName)
@@ -40,12 +55,17 @@ class Combat:
             self.afficher()  
             self.afficher_menu()
             pygame.display.flip() 
+            clock.tick(10)  # Réglez la vitesse de l'animation en ajustant cet argument
 
 
     def afficher(self):
         self.ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
-        self.ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
-        self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
+        #self.ecran.blit(self.joueur, self.position_joueur)  # Afficher le joueur
+        #self.ecran.blit(self.adversaire, self.position_adversaire)  # Afficher l'adversaire
+        self.joueur.update()
+        self.joueur.draw(self.ecran)
+        self.adversaire.update()
+        self.adversaire.draw(self.ecran)
         
         pourcentage_vie_joueur = (self.player.pv / self.player.pvmax) if self.player.pvmax > 0 else 0
         self.longeur_life_player = int(168 * pourcentage_vie_joueur)
