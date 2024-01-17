@@ -4,6 +4,7 @@ from pokemon import pokemon
 import pygame
 from AnimatedSprite import AnimatedSprite
 
+
 class Combat:
     def __init__(self,PpokName,EpokName):
         clock = pygame.time.Clock()
@@ -35,8 +36,8 @@ class Combat:
         self.tour_joueur = True
         self.win = False
         self.font = pygame.font.Font(None, 36)
-        with open(f'assets/Combat/Json atk/{PpokName}.json', 'r') as file:
-            self.attacks_player = json.load(file)
+        with open(f'assets/Pokemon/Json/{PpokName}.json', 'r') as file1:
+            self.attacks_player = json.load(file1)
         with open(f'assets/Combat/Json atk/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
 
@@ -91,8 +92,10 @@ class Combat:
         adversaire_lv_rect = adversaire_lv_surface.get_rect(midbottom=(325, 135))
         self.ecran.blit(adversaire_lv_surface, adversaire_lv_rect)
 
+
     def afficher_menu(self, mouse_pos):
-        for i, attack_key in enumerate(self.attacks_player.keys()):
+        included_keys = ["atk1", "atk2", "atk3", "atk4"]
+        for i, attack_key in enumerate(included_keys):
             attack_name = self.attacks_player[attack_key]["Name"]
             attack_type = self.attacks_player[attack_key]["type"]
 
@@ -114,6 +117,7 @@ class Combat:
             text_surface = self.font.render(attack_name, True, (0, 0, 0))
             text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
             self.ecran.blit(text_surface, text_rect)
+
 
     def utiliser_capacite(self, capacite_key):
         if self.tour_joueur :
@@ -183,6 +187,7 @@ class Combat:
                     self.utiliser_capacite("atk4")
                     if not self.win:
                         self.utiliser_capacite(f"atk{rand}")
+
 
     def fin_combat(self):
         self.ecran.blit(self.fond_win_or_loose,(0,0))
