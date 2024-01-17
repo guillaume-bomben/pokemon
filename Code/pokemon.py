@@ -37,7 +37,8 @@ class pokemon:
 
     def xp_gains(self,xpadd):
         self.xp += xpadd
-        if self.xp >= self.lv ** 3:
-            self.lv += 1
-            self.xp -= self.lv ** 3
-            self.recalcul_stat()
+        while self.xp >= self.lv ** 3:
+            if self.xp >= self.lv ** 3:
+                self.xp -= self.lv ** 3
+                self.lv += 1
+                self.recalcul_stat()

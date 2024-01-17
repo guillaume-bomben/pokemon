@@ -3,11 +3,6 @@ import sys
 
 pygame.init()
 
-# Initialisation de Pygame
-WIDTH, HEIGHT = 800, 600
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-clock = pygame.time.Clock()
-
 class AnimatedSprite:
     def __init__(self, image, frame_width, frame_height):
         self.frame_width, self.frame_height = frame_width, frame_height

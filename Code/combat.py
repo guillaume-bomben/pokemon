@@ -7,7 +7,8 @@ from AnimatedSprite import AnimatedSprite
 class Combat:
     def __init__(self,PpokName,EpokName):
         clock = pygame.time.Clock()
-        self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')  
+        self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')
+        self.fond_win_or_loose = pygame.image.load('assets/Combat/Image/Winner fond.png')  
         
         #Sprite adversaire
         adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
@@ -21,6 +22,7 @@ class Combat:
         
         self.player = pokemon(PpokName)
         self.ennemy = pokemon(EpokName)
+        self.winner = None
         
         self.vert = (0, 255, 0)
         self.blanc = (255, 255, 255)
@@ -31,6 +33,7 @@ class Combat:
         self.ecran = pygame.display.set_mode((800, 600))
 
         self.tour_joueur = True
+        self.win = False
         self.font = pygame.font.Font(None, 36)
         with open(f'assets/Combat/Json atk/{PpokName}.json', 'r') as file:
             self.attacks_player = json.load(file)
@@ -43,10 +46,10 @@ class Combat:
             for event in events:
                 if event.type == pygame.QUIT:
                     running = False
-            self.gerer_evenements(events)  # Gérer les événements pour le combat
-
-            self.afficher()  
-            self.afficher_menu()
+            if self.win == False:
+                self.gerer_evenements(events)  # Gérer les événements pour le combat
+            else:
+                self.fin_combat()
             pygame.display.flip() 
             clock.tick(10)  # Réglez la vitesse de l'animation en ajustant cet argument
 
@@ -131,18 +134,25 @@ class Combat:
             with open(f"assets/Combat/Json res/{atk_type}.json") as f:
                 file = json.load(f)
                 multiplicateur = file[defenseur.type1] * file[defenseur.type2]
-                print(f"multiplicateur : {multiplicateur}")
             defenseur.pv -= degats * multiplicateur
-            # Limiter la vie minimale à 0
+            
             if defenseur.pv < 0:
-                defenseur.pv = 0
-            print(f"{degats * multiplicateur}")
+                self.win = True
+                attaquant.xp_gains((175*defenseur.lv)/7)
+                print(attaquant.lv)
+                print(attaquant.xp)
+                if defenseur == self.player:
+                    self.winner = self.adversaire
+                else:
+                    self.winner = self.joueur
         else:
             print("La capaciter a rater")
         self.tour_joueur = not self.tour_joueur
 
 
     def gerer_evenements(self, events):
+        self.afficher()  
+        self.afficher_menu()
         for event in events:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 rand = random.randint(1,4)
@@ -150,16 +160,27 @@ class Combat:
                 # Vérifier si les coordonnées du clic sont sur un bouton capacité
                 if 85 <= x <= 350 and 495 <= y <= 545:
                     self.utiliser_capacite("atk1")
-                    self.utiliser_capacite(f"atk{rand}")
+                    if not self.win:
+                        self.utiliser_capacite(f"atk{rand}")
                     print("cap 1")
                 elif 85 <= x <= 350 and 550 <= y <= 600:
                     self.utiliser_capacite("atk2")
-                    self.utiliser_capacite(f"atk{rand}")
+                    if not self.win:
+                        self.utiliser_capacite(f"atk{rand}")
                     print("cap 2")
                 elif 440 <= x <= 705 and 495 <= y <= 545:
                     self.utiliser_capacite("atk3")
+                    if not self.win:
+                        self.utiliser_capacite(f"atk{rand}")
                     print("cap 3")
                 elif 440 <= x <= 705 and 550 <= y <= 600:
                     self.utiliser_capacite("atk4")
-                    self.utiliser_capacite(f"atk{rand}")
+                    if not self.win:
+                        self.utiliser_capacite(f"atk{rand}")
                     print("cap 4")
+
+    def fin_combat(self):
+        self.ecran.blit(self.fond_win_or_loose,(0,0))
+        self.winner.rect.midbottom = (400,350)
+        self.winner.update()
+        self.winner.draw(self.ecran)
