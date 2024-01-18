@@ -23,5 +23,11 @@
   } ,
   "atk4" : {
     "Name" : "Canon Graine" , "type" : "Plante" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
-  }  
+  },
+  "scale" : {
+    "width" : 1250, "height": 1250
+  },
+  "cut" : {
+    "width" : 125, "height": 125
+  }
 }

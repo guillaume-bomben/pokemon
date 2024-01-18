@@ -12,13 +12,13 @@ class Combat:
         self.fond_win_or_loose = pygame.image.load('assets/Combat/Image/Winner fond.png')  
         
         #Sprite adversaire
-        adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
-        self.adversaire = AnimatedSprite(adversaire_image,125,125)
+        #adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
+        self.adversaire = AnimatedSprite(EpokName,"Face")
         self.adversaire.rect.bottomright = (655, 325)
         
         #Sprite Joueur
-        joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))    
-        self.joueur =  AnimatedSprite(joueur_image,125,125)
+        #joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))    
+        self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
         self.player = pokemon(PpokName)
@@ -38,7 +38,7 @@ class Combat:
         self.font = pygame.font.Font(None, 36)
         with open(f'assets/Pokemon/Json/{PpokName}.json', 'r') as file1:
             self.attacks_player = json.load(file1)
-        with open(f'assets/Combat/Json atk/{EpokName}.json', 'r') as file2:
+        with open(f'assets/Pokemon/Json/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
 
         running = True

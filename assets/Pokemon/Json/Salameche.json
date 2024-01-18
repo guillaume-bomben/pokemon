@@ -23,5 +23,11 @@
   },
   "atk4" : {
     "Name" : "Crocs Feu" , "type" : "Feu" , "power" : 65 , "precision" : 95 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1375
+  },
+  "cut" : {
+    "width" : 125, "height": 125
   }
 }
