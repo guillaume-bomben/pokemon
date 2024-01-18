@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Feu",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Canicule" , "type" : "Feu" , "power" : 95 , "precision" : 90 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Draco-Griffe" , "type" : "Dragon" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lance-Flammes" , "type" : "Feu" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 2625
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }
