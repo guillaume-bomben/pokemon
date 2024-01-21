@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Feu",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Flammeche" , "type" : "Feu" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Vive-Attaque" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Calcination" , "type" : "Feu" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Danse Flammes" , "type" : "Feu" , "power" : 35 , "precision" : 85 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1000
+  },
+  "cut" : {
+    "width" : 125, "height": 125
   }
 }

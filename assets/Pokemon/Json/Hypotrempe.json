@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Draco-Souffle" , "type" : "Dragon" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Bulles d'O" , "type" : "Eau" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Ouragan" , "type" : "Dragon" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Pistolet à O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1200
+  },
+  "cut" : {
+    "width" : 125, "height": 150
   }
 }

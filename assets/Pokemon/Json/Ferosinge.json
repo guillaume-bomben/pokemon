@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Combat",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Implore" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Griffe" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Combo-Griffe" , "type" : "Normal" , "power" : 40 , "precision" : 80 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Assurance" , "type" : "Tenebres" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1680
+  },
+  "cut" : {
+    "width" : 150, "height": 140
   }
 }
