@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Roche",
     "Type2": "Eau"
+  },
+  "atk1" : {
+    "Name" : "Etreinte" , "type" : "Normal" , "power" : 15 , "precision" : 85 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Pistolet a O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Tir de Boue" , "type" : "Sol" , "power" : 55 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Boule Roc" , "type" : "Roche" , "power" : 25 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1300, "height": 875
+  },
+  "cut" : {
+    "width" : 130, "height": 125
   }
 }

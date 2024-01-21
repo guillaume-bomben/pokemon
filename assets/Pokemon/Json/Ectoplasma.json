@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Spectre",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Chatiment" , "type" : "Spectre" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Coup Bas" , "type" : "Tenebres" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Vibrobscur" , "type" : "Tenebres" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Ball'Ombre" , "type" : "Spectre" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1350
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

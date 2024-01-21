@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Triplattaque" , "type" : "Normal" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Picore" , "type" : "Vol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Brouhaha" , "type" : "Normal" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Bec Vrille" , "type" : "Vol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 2400
+  },
+  "cut" : {
+    "width" : 140, "height": 150
   }
 }

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Acide" , "type" : "Poison" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Sabotage" , "type" : "Tenebres" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tranch'Herbe" , "type" : "Plante" , "power" : 55 , "precision" : 95 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Direct Toxik" , "type" : "Poison" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1450, "height": 1300
+  },
+  "cut" : {
+    "width" : 145, "height": 130
   }
 }

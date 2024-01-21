@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Electrik",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Pouvoir Antique" , "type" : "Roche" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Bec Vrille" , "type" : "Vol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Coup d'Jus" , "type" : "Electrik" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Fatal-Foudre" , "type" : "Electrik" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 350
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }
