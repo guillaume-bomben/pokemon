@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Vive-Attaque" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ouragan" , "type" : "Dragon" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Aeropique" , "type" : "Vol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 95 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 760
+  },
+  "cut" : {
+    "width" : 175, "height": 190
   }
 }

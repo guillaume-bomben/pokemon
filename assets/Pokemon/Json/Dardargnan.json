@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Insecte",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Choc Venin" , "type" : "Poison" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Assurance" , "type" : "Tenebres" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Direct Toxik" , "type" : "Poison" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 350
+  },
+  "cut" : {
+    "width" : 150, "height": 175
   }
 }

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Tornade" , "type" : "Vol" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Vive-Attaque" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Ouragan" , "type" : "Dragon" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1250, "height": 625
+  },
+  "cut" : {
+    "width" : 125, "height": 125
   }
 }
