@@ -86,3 +86,4 @@ class Player(Entity):
             self.speed = 1
             self.all_images = self.get_all_images(self.spritesheet)
         self.keylistener.remove_key(pygame.K_b)
+        
