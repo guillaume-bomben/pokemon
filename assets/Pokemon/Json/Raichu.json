@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Electrik",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Coup d'Jus" , "type" : "Electrik" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Fatal-Foudre" , "type" : "Electrik" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Tonnerre" , "type" : "Electrik" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Queue de Fer" , "type" : "Acier" , "power" : 100 , "precision" : 75 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 2975
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }

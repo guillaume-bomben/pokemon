@@ -1,4 +1,6 @@
-from pokemon import pokemon
+from menu import Menu
+import pygame
 
-sala = pokemon("Salameche")
-print(sala)
+pygame.init()
+
+menu = Menu()

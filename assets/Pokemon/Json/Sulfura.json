@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Feu",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Canicule" , "type" : "Feu" , "power" : 95 , "precision" : 90 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Vent Violent" , "type" : "Vol" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Surchauffe" , "type" : "Feu" , "power" : 130 , "precision" : 90 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Pique" , "type" : "Vol" , "power" : 140 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 2500, "height": 1200
+  },
+  "cut" : {
+    "width" : 250, "height": 200
   }
 }

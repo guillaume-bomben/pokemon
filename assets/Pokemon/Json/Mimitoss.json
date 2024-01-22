@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Insecte",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Choc Mental" , "type" : "Psy" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Rafale Psy" , "type" : "Psy" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Crochet Venin" , "type" : "Poison" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1350
+  },
+  "cut" : {
+    "width" : 125, "height": 135
   }
 }

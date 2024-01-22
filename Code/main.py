@@ -6,7 +6,7 @@ pygame.init()
 blanc = (255, 255, 255)
 
 def main():
-    combat = Combat("Insecateur","Insecateur")
+    combat = Combat("Pyroli","Pyroli")
 
 if __name__ == "__main__":
     main()

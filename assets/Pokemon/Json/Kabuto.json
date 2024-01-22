@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Roche",
     "Type2": "Eau"
+  },
+  "atk1" : {
+    "Name" : "Vole-Vie" , "type" : "Plante" , "power" : 20 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Griffe" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Aqua-Jet" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Tir de Boue" , "type" : "Sol" , "power" : 55 , "precision" : 95 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1250, "height": 875
+  },
+  "cut" : {
+    "width" : 125, "height": 125
   }
 }

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Roche",
     "Type2": "Eau"
+  },
+  "atk1" : {
+    "Name" : "Saumure" , "type" : "Eau" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Vampirisme" , "type" : "Insecte" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Aqua-Breche" , "type" : "Eau" , "power" : 85 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lame de Roc" , "type" : "Roche" , "power" : 100 , "precision" : 80 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 875
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }
