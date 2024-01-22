@@ -25,7 +25,7 @@ class MenuPrincipal:
         self.image_titre = pygame.transform.scale(self.image_titre, (400, 100))
         self.police_titre = pygame.font.Font("polices/Pokemon Solid.ttf", 60)
         self.police_texte = pygame.font.Font("polices/Pokemon Solid.ttf", 30)
-        self.options = ["Nouvelle Partie", "Continuer", "Paramètres", "Crédits", "Ajouter Pokémon"]
+        self.options = ["Nouvelle Partie", "Continuer", "Paramètres", "Crédits", "Ajouter Pokémon", "Pokedex"]
         self.option_selectionnee = 0
 
     def afficher_menu(self):
@@ -55,6 +55,8 @@ class MenuPrincipal:
                             menu_credits.afficher_menu_credits()
                         elif self.options[self.option_selectionnee] == "Ajouter Pokémon":
                             self.ajouter_pokemon()
+                        elif self.options[self.option_selectionnee] == "Voir Pokémon":
+                            self.afficher_pokemon()
 
             fenetre.blit(self.image_fond, (0, 0))
             fenetre.blit(self.image_titre, (largeur_fenetre // 2 - 200, hauteur_fenetre // 4 - 50))
@@ -72,6 +74,7 @@ class MenuPrincipal:
     def ajouter_pokemon(self):
         saisie_active = True
         nom_pokemon = ""
+        type_pokemon = ""
         phase_saisie = 1  # 1 pour le nom, 2 pour le type
 
         while saisie_active:
@@ -103,12 +106,39 @@ class MenuPrincipal:
 
         # Enregistrement du Pokémon
         nouveau_pokemon = {"nom": nom_pokemon, "type": type_pokemon}
-        with open("pokemons.json", "w") as fichier_json:
+        with open("pokemons.json", "a") as fichier_json:
             json.dump(nouveau_pokemon, fichier_json)
             fichier_json.write("\n")
 
         print("Pokémon ajouté : ", nouveau_pokemon)  # Pour la confirmation
 
+    def afficher_pokemon(self):
+        with open("assets/Pokemon/Json/pokemons.json", "r") as fichier_json:
+            pokemons = json.load(fichier_json)
+
+        pygame.mixer.music.pause()
+
+        while True:
+            for evenement in pygame.event.get():
+                if evenement.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                elif evenement.type == pygame.KEYDOWN:
+                    if evenement.key == pygame.K_ESCAPE:
+                        son_clic.play()
+                        pygame.mixer.music.unpause()
+                        return
+
+            fenetre.fill((0, 0, 0))  # Efface l'écran
+
+            y_position = hauteur_fenetre // 2
+            for pokemon in pokemons:
+                texte_pokemon = self.police_texte.render(f"Nom: {pokemon['nom']}, Type: {pokemon['type']}", True, noir)
+                texte_rect_pokemon = texte_pokemon.get_rect(center=(largeur_fenetre // 2, y_position))
+                fenetre.blit(texte_pokemon, texte_rect_pokemon)
+                y_position += 40
+
+            pygame.display.flip()
 
 
 class MenuOptions:
