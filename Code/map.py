@@ -12,14 +12,13 @@ class Map:
         self.tmx_data = None
         self.map_layer = None
         self.group = None
-
-        self.player: Player | None = None
+        self.grass_zones = []
         self.switchs: list[Switch] | None = None
         self.collisions: list[pygame.Rect] | None = None 
-
+        self.player: Player | None = None
         self.current_map: Switch = Switch("switch", "map_0", pygame.Rect(0, 0, 0, 0), 0)
-
         self.switch_map(self.current_map)
+    
 
     def switch_map(self, switch: Switch):
         self.tmx_data = pytmx.load_pygame(f"assets/map/{switch.name}.tmx")
@@ -27,7 +26,8 @@ class Map:
         self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.get_size())
         self.map_layer.zoom = 3
         self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=7)
-        
+        self.load_grass_zones()
+
         if switch.name.split("_")[0] == "map":
             self.map_layer.zoom = 3
         else:
@@ -78,3 +78,12 @@ class Map:
     def pose_player(self, switch: Switch):
         position = self.tmx_data.get_object_by_name("spawn " + self.current_map.name + " " + str(switch.port))
         self.player.position = pygame.math.Vector2(position.x, position.y)
+    
+    def load_grass_zones(self):
+        if self.tmx_data is not None:
+            for obj in self.tmx_data.objects:
+                if obj.type == "grass":
+                    self.grass_zones.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+
+    
+    
