@@ -55,7 +55,7 @@ class MenuPrincipal:
                             menu_credits.afficher_menu_credits()
                         elif self.options[self.option_selectionnee] == "Ajouter Pokémon":
                             self.ajouter_pokemon()
-                        elif self.options[self.option_selectionnee] == "Voir Pokémon":
+                        elif self.options[self.option_selectionnee] == "Pokedex":
                             self.afficher_pokemon()
 
             fenetre.blit(self.image_fond, (0, 0))
@@ -75,7 +75,7 @@ class MenuPrincipal:
         saisie_active = True
         nom_pokemon = ""
         type_pokemon = ""
-        phase_saisie = 1  # 1 pour le nom, 2 pour le type
+        phase_saisie = 1  
 
         while saisie_active:
             for event in pygame.event.get():
@@ -113,7 +113,7 @@ class MenuPrincipal:
         print("Pokémon ajouté : ", nouveau_pokemon)  # Pour la confirmation
 
     def afficher_pokemon(self):
-        with open("assets/Pokemon/Json/pokemons.json", "r") as fichier_json:
+        with open("assets/Pokemon/Json/", "r") as fichier_json:
             pokemons = json.load(fichier_json)
 
         pygame.mixer.music.pause()
@@ -129,7 +129,7 @@ class MenuPrincipal:
                         pygame.mixer.music.unpause()
                         return
 
-            fenetre.fill((0, 0, 0))  # Efface l'écran
+            fenetre.fill((0, 0, 0))  
 
             y_position = hauteur_fenetre // 2
             for pokemon in pokemons:
@@ -222,10 +222,10 @@ class Jeu:
         print("Nouvelle partie !")
 
 
-# Instanciation des classes
+
 menu_principal = MenuPrincipal()
 menu_options = MenuOptions()
 menu_credits = MenuCredits()
 
-# Exécution du menu principal
+
 menu_principal.afficher_menu()
