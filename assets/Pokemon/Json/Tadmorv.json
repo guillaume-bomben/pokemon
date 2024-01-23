@@ -1,0 +1,33 @@
+{
+  "Name": "Tadmorv",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 80,
+    "Defense": 50,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 50,
+    "Vitesse": 25
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Ecras'Face" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Coud'Boue" , "type" : "Sol" , "power" : 20 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Detritus" , "type" : "Pouson" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Tir de Boue" , "type" : "Sol" , "power" : 55 , "precision" : 95 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1900, "height": 1800
+  },
+  "cut" : {
+    "width" : 190, "height": 150
+  }
+}

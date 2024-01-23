@@ -1,0 +1,15 @@
+{
+  "Name": "Taupiqueur",
+  "Stat": {
+    "PV": 10,
+    "Attaque": 55,
+    "Defense": 25,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 45,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

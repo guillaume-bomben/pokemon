@@ -1,0 +1,33 @@
+{
+  "Name": "Insecateur",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 110,
+    "Defense": 80,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 80,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Cru-Ailes" , "type" : "Vol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Plaie Croix" , "type" : "Insecte" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 2240
+  },
+  "cut" : {
+    "width" : 175, "height": 160
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "Name": "Artikodin",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 85,
+    "Defense": 100,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 125,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Glace",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Pouvoir Antique" , "type" : "Roche" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Laser Glace" , "type" : "Glace" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Vent Violent" , "type" : "Vol" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Blizzard" , "type" : "Glace" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 2000, "height": 1200
+  },
+  "cut" : {
+    "width" : 200, "height": 200
+  }
+}

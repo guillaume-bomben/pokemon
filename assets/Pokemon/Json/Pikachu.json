@@ -1,0 +1,33 @@
+{
+  "Name": "Pikachu",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 55,
+    "Defense": 30,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 40,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Frotte-Frimousse" , "type" : "Electrik" , "power" : 20 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Vive-Attaque" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Eclair" , "type" : "Electrik" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Ruse" , "type" : "Normal" , "power" : 30 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1920
+  },
+  "cut" : {
+    "width" : 150, "height": 160
+  }
+}

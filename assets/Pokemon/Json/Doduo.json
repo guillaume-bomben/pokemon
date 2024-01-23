@@ -1,0 +1,33 @@
+{
+  "Name": "Doduo",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 85,
+    "Defense": 45,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 35,
+    "Vitesse": 75
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Vive-Attaque" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Picpic" , "type" : "Vol" , "power" : 35 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Brouhaha" , "type" : "Normal" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Bec Vrille" , "type" : "Vol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 2850
+  },
+  "cut" : {
+    "width" : 140, "height": 150
+  }
+}

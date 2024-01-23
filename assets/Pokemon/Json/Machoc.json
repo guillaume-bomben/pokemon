@@ -1,0 +1,15 @@
+{
+  "Name": "Machoc",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 80,
+    "Defense": 50,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 35,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}

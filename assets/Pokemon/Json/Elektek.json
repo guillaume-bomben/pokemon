@@ -1,0 +1,33 @@
+{
+  "Name": "Elektek",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 83,
+    "Defense": 57,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 85,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Tonnerre" , "type" : "Electrik" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Poing Eclair" , "type" : "Electrik" , "power" : 75 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Coup d'Jus" , "type" : "Electrik" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Meteores" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1400
+  },
+  "cut" : {
+    "width" : 140, "height": 140
+  }
+}

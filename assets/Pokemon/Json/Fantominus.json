@@ -1,0 +1,33 @@
+{
+  "Name": "Fantominus",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 35,
+    "Defense": 30,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 35,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Spectre",
+    "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Lechouille" , "type" : "Spectre" , "power" : 30 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Represailles" , "type" : "Tenebres" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Chatiment" , "type" : "Spectre" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Coup Bas" , "type" : "Tenebres" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1300, "height": 1650
+  },
+  "cut" : {
+    "width" : 130, "height": 150
+  }
+}

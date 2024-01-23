@@ -1,0 +1,33 @@
+{
+  "Name": "Chetiflor",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 75,
+    "Defense": 35,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 30,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Fouet Lianes" , "type" : "Plante" , "power" : 45 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ligotage" , "type" : "Normal" , "power" : 15 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Acide" , "type" : "Poison" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Sabotage" , "type" : "Tenebres" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1250
+  },
+  "cut" : {
+    "width" : 125, "height": 125
+  }
+}

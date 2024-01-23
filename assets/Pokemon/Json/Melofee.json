@@ -1,0 +1,15 @@
+{
+  "Name": "Melofee",
+  "Stat": {
+    "PV": 70,
+    "Attaque": 45,
+    "Defense": 48,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 65,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Fee",
+    "Type2": "None"
+  }
+}

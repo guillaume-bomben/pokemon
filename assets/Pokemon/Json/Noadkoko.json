@@ -1,0 +1,15 @@
+{
+  "Name": "Noadkoko",
+  "Stat": {
+    "PV": 95,
+    "Attaque": 95,
+    "Defense": 85,
+    "Attaque_Speciale": 125,
+    "Defense_Speciale": 65,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Psy"
+  }
+}

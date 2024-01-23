@@ -1,0 +1,15 @@
+{
+  "Name": "Scarabrute",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 125,
+    "Defense": 100,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 70,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "None"
+  }
+}

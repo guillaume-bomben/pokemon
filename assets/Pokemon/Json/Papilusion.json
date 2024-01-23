@@ -1,0 +1,33 @@
+{
+  "Name": "Papilusion",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 45,
+    "Defense": 50,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Choc Mental" , "type" : "Psy" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Bourdon" , "type" : "Insecte" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 450
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

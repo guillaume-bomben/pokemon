@@ -1,0 +1,33 @@
+{
+  "Name": "Minidraco",
+  "Stat": {
+    "PV": 41,
+    "Attaque": 64,
+    "Defense": 45,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 50,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Ligotage" , "type" : "Normal" , "power" : 20 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ouragan" , "type" : "Dragon" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Draco-Queue" , "type" : "Dragon" , "power" : 60 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Souplesse" , "type" : "Normal" , "power" : 80 , "precision" : 75 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 750
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

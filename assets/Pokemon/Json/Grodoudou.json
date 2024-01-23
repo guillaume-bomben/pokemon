@@ -1,0 +1,33 @@
+{
+  "Name": "Grodoudou",
+  "Stat": {
+    "PV": 140,
+    "Attaque": 70,
+    "Defense": 45,
+    "Attaque_Speciale": 75,
+    "Defense_Speciale": 50,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Fee"
+  },
+  "atk1" : {
+    "Name" : "Chant Canon" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Plaquage" , "type" : "Normal" , "power" : 85 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Megaphone" , "type" : "Normal" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Calinerie" , "type" : "Fee" , "power" : 90 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 2310
+  },
+  "cut" : {
+    "width" : 140, "height": 210
+  }
+}

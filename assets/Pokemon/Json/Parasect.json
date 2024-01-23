@@ -1,0 +1,15 @@
+{
+  "Name": "Parasect",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 95,
+    "Defense": 80,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 80,
+    "Vitesse": 30
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Plante"
+  }
+}

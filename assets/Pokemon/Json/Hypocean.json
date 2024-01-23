@@ -1,0 +1,33 @@
+{
+  "Name": "Hypocean",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 65,
+    "Defense": 95,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 45,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Draco-Souffle" , "type" : "Dragon" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Draco-Choc" , "type" : "Dragon" , "power" : 85 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Hydrocanon" , "type" : "Eau" , "power" : 110 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1050
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

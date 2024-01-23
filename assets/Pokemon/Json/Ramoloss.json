@@ -1,0 +1,33 @@
+{
+  "Name": "Ramoloss",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 65,
+    "Defense": 65,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 40,
+    "Vitesse": 15
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "Psy"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Pistolet a O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Choc Mental" , "type" : "Psy" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1800, "height": 1170
+  },
+  "cut" : {
+    "width" : 180, "height": 130
+  }
+}

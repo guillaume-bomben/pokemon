@@ -1,0 +1,33 @@
+{
+  "Name": "Empiflor",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 105,
+    "Defense": 65,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 60,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Sabotage" , "type" : "Tenebres" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Direct Toxik" , "type" : "Poison" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Lame Feuille" , "type" : "Plante" , "power" : 90 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Tempete Verte" , "type" : "Plante" , "power" : 130 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1600, "height": 1400
+  },
+  "cut" : {
+    "width" : 160, "height": 175
+  }
+}

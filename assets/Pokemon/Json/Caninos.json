@@ -1,0 +1,33 @@
+{
+  "Name": "Caninos",
+  "Stat": {
+    "PV": 55,
+    "Attaque": 70,
+    "Defense": 45,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 50,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Flammeche" , "type" : "Feu" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Morsure" , "type" : "Tenebres" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Roue de Feu" , "type" : "Feu" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Crocs Feu" , "type" : "Feu" , "power" : 65 , "precision" : 95 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1300, "height": 1750
+  },
+  "cut" : {
+    "width" : 130, "height": 125
+  }
+}

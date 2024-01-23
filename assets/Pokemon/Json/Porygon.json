@@ -1,0 +1,15 @@
+{
+  "Name": "Porygon",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 60,
+    "Defense": 70,
+    "Attaque_Speciale": 85,
+    "Defense_Speciale": 75,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

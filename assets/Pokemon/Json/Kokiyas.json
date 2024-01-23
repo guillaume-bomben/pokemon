@@ -1,0 +1,33 @@
+{
+  "Name": "Kokiyas",
+  "Stat": {
+    "PV": 30,
+    "Attaque": 65,
+    "Defense": 100,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 25,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Pistolet a O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Eclats Glace" , "type" : "Glace" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Siphon" , "type" : "Eau" , "power" : 35 , "precision" : 85 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1125
+  },
+  "cut" : {
+    "width" : 150, "height": 125
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Nosferapti",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 45,
+    "Defense": 35,
+    "Attaque_Speciale": 30,
+    "Defense_Speciale": 40,
+    "Vitesse": 55
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "Vol"
+  }
+}

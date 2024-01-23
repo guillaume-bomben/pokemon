@@ -1,0 +1,33 @@
+{
+  "Name": "Coconfort",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 25,
+    "Defense": 50,
+    "Attaque_Speciale": 25,
+    "Defense_Speciale": 25,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Dard-Venin" , "type" : "Poison" , "power" : 15 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Dard-Venin" , "type" : "Poison" , "power" : 15 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1080
+  },
+  "cut" : {
+    "width" : 125, "height": 135
+  }
+}

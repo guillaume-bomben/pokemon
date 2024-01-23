@@ -1,0 +1,15 @@
+{
+  "Name": "Magneti",
+  "Stat": {
+    "PV": 25,
+    "Attaque": 35,
+    "Defense": 70,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 55,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Electrik",
+    "Type2": "Acier"
+  }
+}

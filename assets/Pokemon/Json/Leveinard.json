@@ -1,0 +1,15 @@
+{
+  "Name": "Leveinard",
+  "Stat": {
+    "PV": 250,
+    "Attaque": 5,
+    "Defense": 5,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 105,
+    "Vitesse": 50
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

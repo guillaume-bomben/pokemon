@@ -1,0 +1,15 @@
+{
+  "Name": "Osselait",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 50,
+    "Defense": 95,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 50,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

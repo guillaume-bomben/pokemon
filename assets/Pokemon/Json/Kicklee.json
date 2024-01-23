@@ -1,0 +1,15 @@
+{
+  "Name": "Kicklee",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 120,
+    "Defense": 53,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 110,
+    "Vitesse": 87
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}

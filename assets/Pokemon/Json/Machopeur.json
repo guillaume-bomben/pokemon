@@ -1,0 +1,15 @@
+{
+  "Name": "Machopeur",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 100,
+    "Defense": 70,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 60,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}

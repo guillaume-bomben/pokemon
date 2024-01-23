@@ -1,0 +1,15 @@
+{
+  "Name": "Nidorino",
+  "Stat": {
+    "PV": 61,
+    "Attaque": 72,
+    "Defense": 57,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 55,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  }
+}

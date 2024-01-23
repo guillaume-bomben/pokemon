@@ -1,0 +1,15 @@
+{
+  "Name": "Sabelette",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 75,
+    "Defense": 85,
+    "Attaque_Speciale": 20,
+    "Defense_Speciale": 30,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

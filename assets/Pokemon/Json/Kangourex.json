@@ -1,0 +1,15 @@
+{
+  "Name": "Kangourex",
+  "Stat": {
+    "PV": 105,
+    "Attaque": 95,
+    "Defense": 80,
+    "Attaque_Speciale": 40,
+    "Defense_Speciale": 80,
+    "Vitesse": 90
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "None"
+  }
+}

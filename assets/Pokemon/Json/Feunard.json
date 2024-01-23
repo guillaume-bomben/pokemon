@@ -1,0 +1,33 @@
+{
+  "Name": "Feunard",
+  "Stat": {
+    "PV": 73,
+    "Attaque": 76,
+    "Defense": 75,
+    "Attaque_Speciale": 81,
+    "Defense_Speciale": 100,
+    "Vitesse": 100
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Calcination" , "type" : "Feu" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Extrasenseur" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Lance-Flammes" , "type" : "Feu" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Deflagration" , "type" : "Feu" , "power" : 110 , "precision" : 85 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1050
+  },
+  "cut" : {
+    "width" : 175, "height": 175
+  }
+}

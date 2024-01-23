@@ -1,0 +1,33 @@
+{
+  "Name": "Roucarnage",
+  "Stat": {
+    "PV": 83,
+    "Attaque": 80,
+    "Defense": 75,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 70,
+    "Vitesse": 91
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Vent Violent" , "type" : "Vol" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Ouragan" , "type" : "Dragon" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Cru-Ailes" , "type" : "Vol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1600, "height": 1120
+  },
+  "cut" : {
+    "width" : 160, "height": 160
+  }
+}

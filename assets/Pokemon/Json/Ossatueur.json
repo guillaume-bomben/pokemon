@@ -1,0 +1,15 @@
+{
+  "Name": "Ossatueur",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 80,
+    "Defense": 110,
+    "Attaque_Speciale": 50,
+    "Defense_Speciale": 80,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "None"
+  }
+}

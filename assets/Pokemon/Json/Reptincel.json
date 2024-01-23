@@ -1,0 +1,33 @@
+{
+  "Name": "Reptincel",
+  "Stat": {
+    "PV": 58,
+    "Attaque": 64,
+    "Defense": 58,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 65,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Draco-Souffle" , "type" : "Dragon" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Crocs Feu" , "type" : "Feu" , "power" : 65 , "precision" : 95 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lance-Flammes" , "type" : "Feu" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1350
+  },
+  "cut" : {
+    "width" : 175, "height": 150
+  }
+}

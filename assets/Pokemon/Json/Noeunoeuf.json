@@ -1,0 +1,15 @@
+{
+  "Name": "Noeunoeuf",
+  "Stat": {
+    "PV": 60,
+    "Attaque": 40,
+    "Defense": 80,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 45,
+    "Vitesse": 40
+  },
+  "Type": {
+    "Type1": "Plante",
+    "Type2": "Psy"
+  }
+}

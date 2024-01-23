@@ -1,0 +1,33 @@
+{
+  "Name": "Grolem",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 110,
+    "Defense": 130,
+    "Attaque_Speciale": 55,
+    "Defense_Speciale": 65,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Roche",
+    "Type2": "Sol"
+  },
+  "atk1" : {
+    "Name" : "Anti-Air" , "type" : "Vol" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Pietisol" , "type" : "Sol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Seisme" , "type" : "Sol" , "power" : 100 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Lame de Roc" , "type" : "Roche" , "power" : 100 , "precision" : 80 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1800, "height": 1600
+  },
+  "cut" : {
+    "width" : 180, "height": 160
+  }
+}

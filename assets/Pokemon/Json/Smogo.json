@@ -1,0 +1,15 @@
+{
+  "Name": "Smogo",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 65,
+    "Defense": 95,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 45,
+    "Vitesse": 35
+  },
+  "Type": {
+    "Type1": "Poison",
+    "Type2": "None"
+  }
+}

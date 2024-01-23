@@ -1,0 +1,33 @@
+{
+  "Name": "Canarticho",
+  "Stat": {
+    "PV": 52,
+    "Attaque": 65,
+    "Defense": 55,
+    "Attaque_Speciale": 58,
+    "Defense_Speciale": 62,
+    "Vitesse": 60
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Lame d'Air" , "type" : "Vol" , "power" : 75 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Lame Feuille" , "type" : "Plante" , "power" : 90 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Sabotage" , "type" : "Tenebres" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1300, "height": 910
+  },
+  "cut" : {
+    "width" : 130, "height": 130
+  }
+}

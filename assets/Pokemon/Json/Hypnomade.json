@@ -1,0 +1,33 @@
+{
+  "Name": "Hypnomade",
+  "Stat": {
+    "PV": 85,
+    "Attaque": 73,
+    "Defense": 70,
+    "Attaque_Speciale": 73,
+    "Defense_Speciale": 115,
+    "Vitesse": 67
+  },
+  "Type": {
+    "Type1": "Psy",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Coup d'Boule" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Psykoud'Boul" , "type" : "Psy" , "power" : 80 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Psyko" , "type" : "Psy" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Choc Psy" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 2275
+  },
+  "cut" : {
+    "width" : 150, "height": 175
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "Rhinocorne",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 85,
+    "Defense": 95,
+    "Attaque_Speciale": 30,
+    "Defense_Speciale": 30,
+    "Vitesse": 25
+  },
+  "Type": {
+    "Type1": "Sol",
+    "Type2": "Roche"
+  }
+}

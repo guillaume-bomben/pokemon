@@ -1,0 +1,33 @@
+{
+  "Name": "Akwakwak",
+  "Stat": {
+    "PV": 80,
+    "Attaque": 82,
+    "Defense": 78,
+    "Attaque_Speciale": 95,
+    "Defense_Speciale": 80,
+    "Vitesse": 85
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Aqua-Jet" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Choc Mental" , "type" : "Psy" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Hydrocanon" , "type" : "Eau" , "power" : 110 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1200
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "Name": "Arcanin",
+  "Stat": {
+    "PV": 90,
+    "Attaque": 110,
+    "Defense": 80,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 80,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Roue de Feu" , "type" : "Feu" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Mâchouille" , "type" : "Tenebres" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Lance-Flammes" , "type" : "Feu" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Câlinerie" , "type" : "Fee" , "power" : 90 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1200
+  },
+  "cut" : {
+    "width" : 175, "height": 150
+  }
+}

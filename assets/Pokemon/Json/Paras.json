@@ -1,0 +1,15 @@
+{
+  "Name": "Paras",
+  "Stat": {
+    "PV": 35,
+    "Attaque": 70,
+    "Defense": 55,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 55,
+    "Vitesse": 25
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "Plante"
+  }
+}

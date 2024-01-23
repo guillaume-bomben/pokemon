@@ -1,0 +1,33 @@
+{
+  "Name": "Galopa",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 100,
+    "Defense": 70,
+    "Attaque_Speciale": 80,
+    "Defense_Speciale": 80,
+    "Vitesse": 105
+  },
+  "Type": {
+    "Type1": "Feu",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Direct Toxik" , "type" : "Poison" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Estocorne" , "type" : "Acier" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Deflagration" , "type" : "Feu" , "power" : 100 , "precision" : 85 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Roue de Feu" , "type" : "Feu" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 750
+  },
+  "cut" : {
+    "width" : 175, "height": 150
+  }
+}

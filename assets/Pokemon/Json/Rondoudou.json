@@ -1,0 +1,33 @@
+{
+  "Name": "Rondoudou",
+  "Stat": {
+    "PV": 115,
+    "Attaque": 45,
+    "Defense": 20,
+    "Attaque_Speciale": 45,
+    "Defense_Speciale": 25,
+    "Vitesse": 20
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Fee"
+  },
+  "atk1" : {
+    "Name" : "Ecras'Face" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Voix Enjoleuse" , "type" : "Fee" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Echo" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Implore" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1430
+  },
+  "cut" : {
+    "width" : 125, "height": 130
+  }
+}

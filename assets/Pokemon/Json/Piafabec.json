@@ -1,0 +1,15 @@
+{
+  "Name": "Piafabec",
+  "Stat": {
+    "PV": 40,
+    "Attaque": 60,
+    "Defense": 30,
+    "Attaque_Speciale": 31,
+    "Defense_Speciale": 31,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Normal",
+    "Type2": "Vol"
+  }
+}

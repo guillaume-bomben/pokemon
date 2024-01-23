@@ -1,0 +1,33 @@
+{
+  "Name": "Aquali",
+  "Stat": {
+    "PV": 130,
+    "Attaque": 65,
+    "Defense": 60,
+    "Attaque_Speciale": 110,
+    "Defense_Speciale": 95,
+    "Vitesse": 65
+  },
+  "Type": {
+    "Type1": "Eau",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Onde Boreale" , "type" : "Glace" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Morsure" , "type" : "Tenebres" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Ocroupi" , "type" : "Eau" , "power" : 90 , "precision" : 85 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1650
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

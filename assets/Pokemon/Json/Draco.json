@@ -1,0 +1,33 @@
+{
+  "Name": "Draco",
+  "Stat": {
+    "PV": 61,
+    "Attaque": 84,
+    "Defense": 65,
+    "Attaque_Speciale": 70,
+    "Defense_Speciale": 70,
+    "Vitesse": 70
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Draco-Queue" , "type" : "Dragon" , "power" : 60 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Souplesse" , "type" : "Normal" , "power" : 80 , "precision" : 75 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Hydro-Queue" , "type" : "Eau" , "power" : 90 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Draco-Charge" , "type" : "Dragon" , "power" : 100 , "precision" : 75 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1950
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

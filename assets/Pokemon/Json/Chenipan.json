@@ -1,0 +1,33 @@
+{
+  "Name": "Chenipan",
+  "Stat": {
+    "PV": 45,
+    "Attaque": 30,
+    "Defense": 35,
+    "Attaque_Speciale": 20,
+    "Defense_Speciale": 20,
+    "Vitesse": 45
+  },
+  "Type": {
+    "Type1": "Insecte",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Piqure" , "type" : "Insecte" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 1125
+  },
+  "cut" : {
+    "width" : 125, "height": 125
+  }
+}

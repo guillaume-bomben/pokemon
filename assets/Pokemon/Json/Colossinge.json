@@ -1,0 +1,33 @@
+{
+  "Name": "Colossinge",
+  "Stat": {
+    "PV": 65,
+    "Attaque": 105,
+    "Defense": 60,
+    "Attaque_Speciale": 60,
+    "Defense_Speciale": 70,
+    "Vitesse": 95
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Trepignement" , "type" : "Sol" , "power" : 75 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Assurance" , "type" : "Tenebres" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Coup Croix" , "type" : "Combat" , "power" : 100 , "precision" : 80 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Close Combat" , "type" : "Combat" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 900
+  },
+  "cut" : {
+    "width" : 150, "height": 150
+  }
+}

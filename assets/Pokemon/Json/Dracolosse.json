@@ -1,0 +1,33 @@
+{
+  "Name": "Dracolosse",
+  "Stat": {
+    "PV": 91,
+    "Attaque": 134,
+    "Defense": 95,
+    "Attaque_Speciale": 100,
+    "Defense_Speciale": 100,
+    "Vitesse": 80
+  },
+  "Type": {
+    "Type1": "Dragon",
+    "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Colere" , "type" : "Dragon" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ultralaser" , "type" : "Normal" , "power" : 150 , "precision" : 90 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Hydro-Queue" , "type" : "Eau" , "power" : 90 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Draco-Charge" , "type" : "Dragon" , "power" : 100 , "precision" : 75 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1600, "height": 1925
+  },
+  "cut" : {
+    "width" : 160, "height": 175
+  }
+}

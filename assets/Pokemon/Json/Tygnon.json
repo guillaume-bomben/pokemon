@@ -1,0 +1,15 @@
+{
+  "Name": "Tygnon",
+  "Stat": {
+    "PV": 50,
+    "Attaque": 105,
+    "Defense": 79,
+    "Attaque_Speciale": 35,
+    "Defense_Speciale": 110,
+    "Vitesse": 76
+  },
+  "Type": {
+    "Type1": "Combat",
+    "Type2": "None"
+  }
+}
