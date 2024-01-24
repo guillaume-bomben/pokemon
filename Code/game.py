@@ -6,6 +6,7 @@ from map import Map
 from entity import Entity
 from keylistener import Keylistener
 from player import Player
+from combat import Combat
 
 class Game:
     def __init__(self):
@@ -32,6 +33,7 @@ class Game:
                     if keys[pygame.K_z] or keys[pygame.K_q] or keys[pygame.K_s] or keys[pygame.K_d]:
                         #Vérifie les rencontres potentielles
                         if self.player.check_for_encounters():
+                            self.combat_screen()
                             self.in_combat = True
                     self.last_time = actual_time
             else:
@@ -50,12 +52,8 @@ class Game:
     
     def combat_screen(self):
     # Logique pour afficher l'écran de combat
-        red_overlay = pygame.Surface(self.screen.get_size())
-        red_overlay.set_alpha(128)
-        red_overlay.fill((255, 0, 0))
-        self.screen.get_display().blit(red_overlay, (0, 0))
-        pygame.display.flip()
-
-    # Gérer ici le combat, les entrées, etc.
+        player = "pikachu"
+        adversaire = "pikachu"
+        combat = Combat(player,adversaire)
 
 

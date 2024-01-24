@@ -6,8 +6,6 @@ from keylistener import Keylistener
 from screen import Screen
 from switch import Switch
 
-
-
 class Player(Entity):
     def __init__(self, keylistener: Keylistener, screen: Screen, map, x: int, y: int):
         super().__init__(keylistener, screen, x, y)
@@ -37,12 +35,9 @@ class Player(Entity):
             x = random.random()
             print(x)
             if x < 0.1:
-                self.initiate_encounter()
                 return True
         return False
 
-    def initiate_encounter(self):
-        self.in_combat = True 
 
     
     def set_map(self, map_object):
@@ -89,12 +84,7 @@ class Player(Entity):
                     moved = True
                 else:
                     self.direction = "down"
-
-            new_tile = (self.position.x // 16, self.position.y // 16)
-            if moved and new_tile != self.last_tile and self.on_grass_tile():
-                self.last_tile = new_tile
-                if random.random() < 0.1:
-                    self.initiate_encounter()
+            
 
     def add_switchs(self, switchs: list[Switch]):
         self.switchs = switchs
