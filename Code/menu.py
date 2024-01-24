@@ -1,5 +1,7 @@
 import pygame 
 
+from game import Game
+
 class Menu:
     def __init__(self):
         self.background = pygame.image.load("assets/Menu/Background menu.png")
@@ -20,6 +22,8 @@ class Menu:
                     running = False
                 elif event.type == pygame.MOUSEMOTION:
                     self.gerer_survol(event.pos)
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    self.gerer_clic(event.pos)
             self.afficher()
             pygame.display.flip()
 
@@ -52,3 +56,14 @@ class Menu:
         b3 = self.font.render("Pokedex", True, (255, 255, 255))
         b3_pos = b3.get_rect(center=(400, 500))
         self.ecran.blit(b3, b3_pos)
+    
+    def gerer_clic(self, mouse_pos):
+        b1_rect = pygame.Rect(400 - 110, 300 - 18, 220, 36)
+        if b1_rect.collidepoint(mouse_pos):
+            self.lancer_jeu()
+
+    def lancer_jeu(self):
+        # Créez une instance de votre jeu et lancez-le
+        jeu = Game()
+        jeu.run()
+
