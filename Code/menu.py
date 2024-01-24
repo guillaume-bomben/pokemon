@@ -2,6 +2,8 @@ import pygame
 
 from game import Game
 
+pygame.mixer.init()
+
 class Menu:
     def __init__(self):
         self.background = pygame.image.load("assets/Menu/Background menu.png")
@@ -10,6 +12,8 @@ class Menu:
         self.m2_size = (220, 36)
         self.m2 = pygame.transform.scale(original_image, self.m2_size)
         self.m2_hover = pygame.transform.scale(original_image, (int(self.m2_size[0]*1.2), int(self.m2_size[1]*1.2)))  # Image agrandie pour la souris
+
+        pygame.mixer.music.load("assets/remix.mp3")
 
         self.ecran = pygame.display.set_mode((800, 600))
         self.font = pygame.font.Font(None, 36)
@@ -76,6 +80,7 @@ class Menu:
 
     def lancer_jeu(self):
         # Créez une instance de votre jeu et lancez-le
+        pygame.mixer.music.play(-1)
         jeu = Game()
         jeu.run()
 
