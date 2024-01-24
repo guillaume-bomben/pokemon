@@ -59,8 +59,20 @@ class Menu:
     
     def gerer_clic(self, mouse_pos):
         b1_rect = pygame.Rect(400 - 110, 300 - 18, 220, 36)
+        b2_rect = pygame.Rect(400 - 110, 400 - 18, 220, 36)  # Bouton Add Pokemon
+        b3_rect = pygame.Rect(400 - 110, 500 - 18, 220, 36)  # Bouton Pokedex
+        
         if b1_rect.collidepoint(mouse_pos):
             self.lancer_jeu()
+        elif b2_rect.collidepoint(mouse_pos):
+            self.afficher_ecran_couleur((0, 255, 0))  # Vert pour Add Pokemon
+        elif b3_rect.collidepoint(mouse_pos):
+            self.afficher_ecran_couleur((0, 0, 255))  # Bleu pour Pokedex
+
+    def afficher_ecran_couleur(self, couleur):
+        self.ecran.fill(couleur)
+        pygame.display.flip()
+        pygame.time.wait(2000)  # Attendre 2 secondes avant de revenir au menu
 
     def lancer_jeu(self):
         # Créez une instance de votre jeu et lancez-le
