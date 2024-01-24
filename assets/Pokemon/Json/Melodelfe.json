@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Fee",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Vampibaiser" , "type" : "Fee" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Poing Meteore" , "type" : "Acier" , "power" : 90 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Psyko" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Pouvoir Lunaire" , "type" : "Fee" , "power" : 95 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1650
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

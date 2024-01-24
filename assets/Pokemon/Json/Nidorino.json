@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Poison",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Direct Toxik" , "type" : "Poison" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Picpic" , "type" : "Vol" , "power" : 35 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Double Pied" , "type" : "Combat" , "power" : 30 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Koud'Korne" , "type" : "Normal" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1400
+  },
+  "cut" : {
+    "width" : 140, "height": 140
   }
 }

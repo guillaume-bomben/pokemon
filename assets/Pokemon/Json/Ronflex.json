@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Machouille" , "type" : "Tenebres" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Plaquage" , "type" : "Normal" , "power" : 85 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Marto-Poing" , "type" : "Combat" , "power" : 100 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Eructation" , "type" : "Poison" , "power" : 120 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1600, "height": 3150
+  },
+  "cut" : {
+    "width" : 160, "height": 175
   }
 }

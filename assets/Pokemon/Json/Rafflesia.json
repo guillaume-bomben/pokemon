@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Pouvoir Lunaire" , "type" : "Fee" , "power" : 95 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Tempete Florale" , "type" : "Plante" , "power" : 90 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Danse Fleurs" , "type" : "Plante" , "power" : 120 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Giga-Sangsue" , "type" : "Plante" , "power" : 95 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1120
+  },
+  "cut" : {
+    "width" : 175, "height": 140
   }
 }

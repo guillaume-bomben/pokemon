@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Feu",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Ebullilave" , "type" : "Feu" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Lance-Flammes" , "type" : "Feu" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Deflagration" , "type" : "Feu" , "power" : 110 , "precision" : 85 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Ultralaser" , "type" : "Normal" , "power" : 150 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1050
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

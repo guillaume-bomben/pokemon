@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "Psy"
+  },
+  "atk1" : {
+    "Name" : "Surf" , "type" : "Eau" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Rayon Gemme" , "type" : "Roche" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Psyko" , "type" : "Psy" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Hydrocanon" , "type" : "Eau" , "power" : 110 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1300, "height": 2080
+  },
+  "cut" : {
+    "width" : 130, "height": 130
   }
 }

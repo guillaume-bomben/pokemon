@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Psy",
     "Type2": "Fee"
+  },
+  "atk1" : {
+    "Name" : "Rafale Psy" , "type" : "Psy" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Psyko" , "type" : "Psy" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Coup Bas" , "type" : "Tenebres" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Éclat Magique" , "type" : "Fee" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1950
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

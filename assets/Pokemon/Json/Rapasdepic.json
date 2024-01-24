@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Assurance" , "type" : "Tenebres" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Aeropique" , "type" : "Vol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tunnelier" , "type" : "Sol" , "power" : 80 , "precision" : 95 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Bec Vrille" , "type" : "Vol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 525
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }

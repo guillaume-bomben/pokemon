@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Pistolet a O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Acide" , "type" : "Poison" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Dard-Venin" , "type" : "Poison" , "power" : 30 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1500
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

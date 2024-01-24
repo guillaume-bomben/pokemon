@@ -3,10 +3,5 @@ import pygame
 
 pygame.init()
 
-blanc = (255, 255, 255)
+combat = Combat("Rhinoferos","Rhinoferos")
 
-def main():
-    combat = Combat("Pyroli","Pyroli")
-
-if __name__ == "__main__":
-    main()

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "Roche"
+  },
+  "atk1" : {
+    "Name" : "Megacorne" , "type" : "Insecte" , "power" : 120 , "precision" : 85 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Lame de Roc" , "type" : "Roche" , "power" : 100 , "precision" : 80 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Seisme" , "type" : "Sol" , "power" : 100 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Tunnelier" , "type" : "Sol" , "power" : 80 , "precision" : 95 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 3500
+  },
+  "cut" : {
+    "width" : 150, "height": 175
   }
 }

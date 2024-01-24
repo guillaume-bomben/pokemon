@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Combat",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Poing Glace" , "type" : "Glace" , "power" : 75 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ultimapoing" , "type" : "Normal" , "power" : 80 , "precision" : 85 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Close Combat" , "type" : "Combat" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Mitra-Poing" , "type" : "Combat" , "power" : 150 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1000, "height": 1575
+  },
+  "cut" : {
+    "width" : 100, "height": 175
   }
 }

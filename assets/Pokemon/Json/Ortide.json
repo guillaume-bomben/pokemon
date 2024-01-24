@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "Poison"
+  },
+  "atk1" : {
+    "Name" : "Pouvoir Lunaire" , "type" : "Fee" , "power" : 95 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Acide" , "type" : "Poison" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Mega-Sangsue" , "type" : "Plante" , "power" : 75 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Giga-Sangsue" , "type" : "Plante" , "power" : 95 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1400
+  },
+  "cut" : {
+    "width" : 140, "height": 140
   }
 }

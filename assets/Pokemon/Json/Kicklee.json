@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Combat",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Pied Bruleur" , "type" : "Feu" , "power" : 85 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Ultimawashi" , "type" : "Normal" , "power" : 120 , "precision" : 75 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Pied Voltige" , "type" : "Combat" , "power" : 130 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Talon-Marteau" , "type" : "Combat" , "power" : 120 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1925
+  },
+  "cut" : {
+    "width" : 175, "height": 175
   }
 }

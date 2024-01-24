@@ -1,6 +1,7 @@
 from menu import Menu
+from pokedex import pokedex
 import pygame
 
 pygame.init()
 
-menu = Menu()
+poke = pokedex()

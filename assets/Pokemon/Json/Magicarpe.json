@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1980
+  },
+  "cut" : {
+    "width" : 150, "height": 165
   }
 }

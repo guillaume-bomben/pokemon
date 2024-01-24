@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Tunnel" , "type" : "Sol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Telluriforce" , "type" : "Sol" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Seisme" , "type" : "Sol" , "power" : 100 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1350, "height": 1125
+  },
+  "cut" : {
+    "width" : 135, "height": 125
   }
 }

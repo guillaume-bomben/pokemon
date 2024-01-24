@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "Combat"
+  },
+  "atk1" : {
+    "Name" : "Hydrocanon" , "type" : "Eau" , "power" : 110 , "precision" : 80 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Telluriforce" , "type" : "Sol" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Plaquage" , "type" : "Normal" , "power" : 85 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Bulles d'O" , "type" : "Eau" , "power" : 65 , "precision" : 80 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1170
+  },
+  "cut" : {
+    "width" : 150, "height": 130
   }
 }

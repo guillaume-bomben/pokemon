@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Pistolet a O" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Griffe Acier" , "type" : "Acier" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tir de Boue" , "type" : "Sol" , "power" : 55 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Bulles d'O" , "type" : "Eau" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1000
+  },
+  "cut" : {
+    "width" : 150, "height": 125
   }
 }

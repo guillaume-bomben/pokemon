@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Combat",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Eclate-Roc" , "type" : "Combat" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Vendetta" , "type" : "Combat" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Pisto-Poing" , "type" : "Acier" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Double Baffe" , "type" : "Dragon" , "power" : 40 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1250, "height": 2250
+  },
+  "cut" : {
+    "width" : 125, "height": 150
   }
 }

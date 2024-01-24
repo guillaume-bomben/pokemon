@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Aqua-Jet" , "type" : "Eau" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Eclats Glace" , "type" : "Glace" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Vent Glace" , "type" : "Glace" , "power" : 55 , "precision" : 95 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Saumure" , "type" : "Eau" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 625
+  },
+  "cut" : {
+    "width" : 150, "height": 125
   }
 }
