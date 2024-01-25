@@ -23,6 +23,7 @@ class pokedex:
                     self.pok.append("unknown")
                 self.index_affichage = 5
         self.l_affichage = []
+        self.index_page = 1
         self.apok = AnimatedSprite(self.current_pokemon,"Face")
         self.apok.rect.center = (175, 175)
         
@@ -44,14 +45,18 @@ class pokedex:
                 x, y = pygame.mouse.get_pos()
                 if 680 <= x <= 770 and 45 <= y <= 90:
                     # Changer les cinq prochains Pokémon à afficher
+                    self.index_page +=1
                     self.index_affichage += 5
                     if self.index_affichage >= len(self.pok)+1:
                         self.index_affichage = 5
+                        self.index_page = 1
                 elif 580 <= x <= 670 and 45 <= y <= 90:
                     # Changer les cinq prochains Pokémon à afficher
                     self.index_affichage -= 5
+                    self.index_page -= 1
                     if self.index_affichage <= 0:
                         self.index_affichage = len(self.pok)
+                        self.index_page = 150//5
                 else:
                     for index, nom_pokemon in enumerate(self.l_affichage):
                         y_position = 130 + index * 70
@@ -82,10 +87,18 @@ class pokedex:
             self.ecran.blit(texte_surface, (600, y_position))
         
         nbrencontrer = self.font.render(str(self.rencontre),True,(255,255,255))
-        self.ecran.blit(nbrencontrer,nbrencontrer.get_rect(center=(673,495)))
+        self.ecran.blit(nbrencontrer,nbrencontrer.get_rect(center=(710,492)))
         
         nbTotal = self.font.render(str(len(self.pok)),True,(255,255,255))
-        self.ecran.blit(nbTotal,nbTotal.get_rect(center=(673,555)))
+        self.ecran.blit(nbTotal,nbTotal.get_rect(center=(765,492)))
+        
+        nbPageTotal = self.font.render("30",True,(255,255,255))
+        self.ecran.blit(nbPageTotal,nbPageTotal.get_rect(center=(765,563)))
+        
+        nbPage = self.font.render(str(self.index_page),True,(255,255,255))
+        self.ecran.blit(nbPage,nbPage.get_rect(center=(710,563)))
+
+
 
     def afficher_caracteristiques(self, nom_pokemon):
         if nom_pokemon != "unknown":
