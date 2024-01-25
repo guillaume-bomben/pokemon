@@ -87,13 +87,13 @@ class Combat:
         self.longeur_life_player = int(168 * pourcentage_vie_joueur)
         # Dessiner la barre de vie du joueur
         pygame.draw.rect(self.ecran, self.vert, (571, 428, self.longeur_life_player, 13))
-        pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
+        #pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
         pourcentage_vie_ennemy = (self.ennemy.pv / self.ennemy.pvmax) if self.ennemy.pvmax > 0 else 0
         self.longeur_life_ennemy = int(168 * pourcentage_vie_ennemy)
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
-        pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
+        #pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
         
         # afficher le nom du joueur
         joueur_name_surface = self.font.render(f"{self.player.name}", True, self.blanc)
@@ -121,22 +121,22 @@ class Combat:
             attack_type = self.attacks_player[attack_key]["type"]
 
             # Vérifiez si la souris survole le bouton
-            button_rect = pygame.Rect(85 if i < 2 else 435, 495 if i % 2 == 0 else 550, 265, 50)
+            button_rect = pygame.Rect(85 if i < 2 else 435, 490 if i % 2 == 0 else 545, 265, 50)
             
             if button_rect.collidepoint(mouse_pos):
                 # Si survolé, utilisez l'image de survol
                 attack_image = pygame.image.load(f"assets/Combat/Image/Batk {attack_type}.png")
                 attack_image = pygame.transform.scale(attack_image, (265, 50))
-                self.ecran.blit(attack_image, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+                self.ecran.blit(attack_image, (85 if i < 2 else 435, 490 if i % 2 == 0 else 545))
             else:
                 # Sinon, utilisez l'image normale
                 batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
                 batk = pygame.transform.scale(batk, (265, 50))
-                self.ecran.blit(batk, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+                self.ecran.blit(batk, (85 if i < 2 else 435, 490 if i % 2 == 0 else 545))
 
             # Affichez le texte
             text_surface = self.font.render(attack_name, True, (0, 0, 0))
-            text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
+            text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 515 if i % 2 == 0 else 570))
             self.ecran.blit(text_surface, text_rect)
 
 
