@@ -52,8 +52,8 @@ class Game:
     
     def combat_screen(self):
     # Logique pour afficher l'écran de combat
-        player = "pikachu"
-        adversaire = "pikachu"
+        player = "Sulfura"
+        adversaire = "Sulfura"
         combat = Combat(player,adversaire)
 
 
