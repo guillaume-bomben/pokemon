@@ -1,6 +1,6 @@
 import pygame 
 
-from game import Game
+from choixPokemon import choixPokemon
 from pokedex import pokedex
 from addpokemon import addpokemon
 
@@ -78,14 +78,11 @@ class Menu:
     def lancer_jeu(self):
         # Créez une instance de votre jeu et lancez-le
         pygame.mixer.music.play(-1)
-        jeu = Game()
-        jeu.run()
+        choix = choixPokemon()
 
     def lancer_pokedex(self):
-        pygame.mixer.music.play(-1)
         pdex = pokedex()
     
     def lancer_addPokemon(self):
-        pygame.mixer.music.play(-1)
         add = addpokemon()
         add.run()

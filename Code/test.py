@@ -1,6 +1,6 @@
-from menu import Menu
 import pygame
+from choixPokemon import choixPokemon
 
 pygame.init()
 
-menu = Menu()
+choix = choixPokemon()

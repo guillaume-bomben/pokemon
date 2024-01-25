@@ -1,7 +1,6 @@
-from combat import Combat
+from menu import Menu
 import pygame
 
 pygame.init()
 
-combat = Combat("Rhinoferos","Rhinoferos")
-
+menu = Menu()

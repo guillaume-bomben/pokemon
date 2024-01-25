@@ -36,19 +36,25 @@ class Game:
                             self.combat_screen()
                             self.in_combat = True
                     self.last_time = actual_time
+            elif self.combat.running == False:
+                self.in_combat = False
             else:
                 self.combat_screen()
 
 
     def handle_input(self):
+        keys_pressed = pygame.key.get_pressed()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-            elif event.type == pygame.KEYDOWN:
-                self.keylistener.add_keys(event.key)
-            elif event.type == pygame.KEYUP:
-                self.keylistener.remove_key(event.key)
-    
+        # Ajouter les touches enfoncées
+        for key in (pygame.K_z, pygame.K_q, pygame.K_s, pygame.K_d,pygame.K_b):
+            if keys_pressed[key]:
+                self.keylistener.add_keys(key)
+            else:
+                self.keylistener.remove_key(key)
+
+
     def combat_screen(self):
     # Logique pour afficher l'écran de combat
         player = "Sulfura"

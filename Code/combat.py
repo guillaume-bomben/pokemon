@@ -12,18 +12,17 @@ class Combat:
         self.fond_win_or_loose = pygame.image.load('assets/Combat/Image/Winner fond.png')  
         
         #Sprite adversaire
-        #adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
         self.adversaire = AnimatedSprite(EpokName,"Face")
         self.adversaire.rect.bottomright = (655, 325)
         
         #Sprite Joueur
-        #joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))    
         self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
         self.player = pokemon(PpokName)
         self.ennemy = pokemon(EpokName)
         self.winner = None
+        self.out = False
         
         self.vert = (0, 255, 0)
         self.blanc = (255, 255, 255)
@@ -40,13 +39,19 @@ class Combat:
             self.attacks_player = json.load(file1)
         with open(f'assets/Pokemon/Json/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
+        with open("Code/Pokedex.json", "r+") as file3:
+            self.pokedex = json.load(file3)
+            self.pokedex[EpokName] = "True"
+            file3.seek(0)  # Déplace le curseur au début du fichier
+            json.dump(self.pokedex, file3, indent=2)  # Réécrit le fichier avec la mise à jour
+            file3.truncate()  # Tronque le fichier à la position actuelle (élimine le contenu excédentaire)
 
-        running = True
-        while running:
+        self.running = True
+        while self.running:
             events = pygame.event.get()
             for event in events:
                 if event.type == pygame.QUIT:
-                    running = False
+                    self.running = False
             if self.win == False:
                 self.gerer_evenements(events)  # Gérer les événements pour le combat
             else:
@@ -150,9 +155,10 @@ class Combat:
             
             if defenseur.pv < 0:
                 self.win = True
-                attaquant.xp_gains((175*defenseur.lv)/7)
-                print(attaquant.lv)
-                print(attaquant.xp)
+                if self.tour_joueur:
+                    attaquant.xp_gains((175*defenseur.lv)/7)
+                    print(attaquant.lv)
+                    print(attaquant.xp)
                 if defenseur == self.player:
                     self.winner = self.adversaire
                 else:
@@ -194,3 +200,7 @@ class Combat:
         self.winner.rect.midbottom = (400,350)
         self.winner.update()
         self.winner.draw(self.ecran)
+        
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_a]:
+            self.running = False
