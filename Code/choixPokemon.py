@@ -51,7 +51,7 @@ class choixPokemon:
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Left mouse button clicked
                 x, y = event.pos
                 clicked_pokemon = self.get_clicked_pokemon(x, y)
-                if clicked_pokemon:
+                if clicked_pokemon and clicked_pokemon != "unknown":
                     self.update_player_pokemon(clicked_pokemon)
                     jeu = Game()
                     jeu.run()

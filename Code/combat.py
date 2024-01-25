@@ -19,8 +19,24 @@ class Combat:
         self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
-        self.player = pokemon(PpokName)
-        self.ennemy = pokemon(EpokName)
+        with open("Code/liste_Player_Pokemon.json", "r+") as file0:
+            data = json.load(file0)
+            if PpokName not in data:
+                data[PpokName] = {
+                    "LV": 5,
+                    "XP": 0
+                }
+                file0.seek(0)
+                json.dump(data, file0, indent=2)
+                file0.truncate()
+                pokemon_lv = 5
+                pokemon_xp = 0
+            else:
+                pokemon_lv = data[PpokName]["LV"]
+                pokemon_xp = data[PpokName]["XP"]
+        self.player = pokemon(PpokName,pokemon_lv,pokemon_xp)
+        ennemy_lv = random.randint(pokemon_lv-2,pokemon_lv+2)
+        self.ennemy = pokemon(EpokName,ennemy_lv)
         self.winner = None
         self.out = False
         
@@ -157,6 +173,14 @@ class Combat:
                 self.win = True
                 if self.tour_joueur:
                     attaquant.xp_gains((175*defenseur.lv)/7)
+                    with open("Code/liste_Player_Pokemon.json", "r+") as liste:
+                        data = json.load(liste)
+                        data[attaquant.name]["LV"] = attaquant.lv
+                        data[attaquant.name]["XP"] = attaquant.xp
+                        liste.seek(0)
+                        json.dump(data, liste, indent=2)
+                        liste.truncate()
+
                     print(attaquant.lv)
                     print(attaquant.xp)
                 if defenseur == self.player:

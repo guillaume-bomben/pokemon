@@ -16,6 +16,7 @@ class Menu:
         self.m2_hover = pygame.transform.scale(original_image, (int(self.m2_size[0]*1.2), int(self.m2_size[1]*1.2)))  # Image agrandie pour la souris
 
         pygame.mixer.music.load("assets/remix.mp3")
+        pygame.mixer.music.set_volume(0.1)
 
         self.ecran = pygame.display.set_mode((800, 600))
         self.font = pygame.font.Font(None, 36)
