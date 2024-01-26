@@ -59,11 +59,11 @@ class Game:
 
     def combat_screen(self):
     # Logique pour afficher l'écran de combat
-        with open("Code/pokemon_player.json", "r") as file:
+        with open("assets/pokemon_player.json", "r") as file:
             data = json.load(file)
         player = data["selected_pokemon"]
         
-        with open("Code/Pokedex.json",'r') as pokedex:
+        with open("assets/Pokedex.json",'r') as pokedex:
             dpokedex = json.load(pokedex)
         adversaire = random.choice(list(dpokedex.keys()))
         self.combat = Combat(player,adversaire)

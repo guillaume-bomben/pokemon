@@ -13,7 +13,7 @@ class pokedex:
         
         self.pok = []
         self.rencontre = 0
-        with open("Code/pokedex.json","r") as file:
+        with open("assets/pokedex.json","r") as file:
             data = json.load(file)
             for pokemon in data.keys():
                 if data[pokemon] == "True":

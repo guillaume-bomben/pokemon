@@ -19,7 +19,7 @@ class Combat:
         self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
-        with open("Code/liste_Player_Pokemon.json", "r+") as file0:
+        with open("assets/liste_Player_Pokemon.json", "r+") as file0:
             data = json.load(file0)
             if PpokName not in data:
                 data[PpokName] = {
@@ -55,7 +55,7 @@ class Combat:
             self.attacks_player = json.load(file1)
         with open(f'assets/Pokemon/Json/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
-        with open("Code/Pokedex.json", "r+") as file3:
+        with open("assets/Pokedex.json", "r+") as file3:
             self.pokedex = json.load(file3)
             self.pokedex[EpokName] = "True"
             file3.seek(0)  # Déplace le curseur au début du fichier
@@ -173,7 +173,7 @@ class Combat:
                 self.win = True
                 if self.tour_joueur:
                     attaquant.xp_gains((175*defenseur.lv)/7)
-                    with open("Code/liste_Player_Pokemon.json", "r+") as liste:
+                    with open("assets/liste_Player_Pokemon.json", "r+") as liste:
                         data = json.load(liste)
                         data[attaquant.name]["LV"] = attaquant.lv
                         data[attaquant.name]["XP"] = attaquant.xp

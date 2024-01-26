@@ -8,7 +8,7 @@ class choixPokemon:
         self.fond = pygame.image.load("assets/Menu/add pokemon fond.png")
         
         self.pok = []
-        with open("Code/pokedex.json","r") as file:
+        with open("assets/pokedex.json","r") as file:
             data = json.load(file)
             for pokemon in data.keys():
                 if data[pokemon] == "False":
@@ -70,11 +70,11 @@ class choixPokemon:
         return None
 
     def update_player_pokemon(self, selected_pokemon):
-        with open("Code/pokemon_player.json", "r") as file:
+        with open("assets/pokemon_player.json", "r") as file:
             player_data = json.load(file)
 
         # Update the player's Pokemon data with the selected Pokemon
         player_data["selected_pokemon"] = selected_pokemon
 
-        with open("Code/pokemon_player.json", "w") as file:
+        with open("assets/pokemon_player.json", "w") as file:
             json.dump(player_data, file)
