@@ -4,24 +4,28 @@ from game import Game
 
 class choixPokemon:
     def __init__(self) -> None:
+        ## Configuration initiale de l'affichage
         self.ecran = pygame.display.set_mode((800, 600))
         self.fond = pygame.image.load("assets/Menu/add pokemon fond.png")
         
+        #Chargement des Pokémon à partir du fichier JSON et traitement des données
         self.pok = []
         with open("assets/pokedex.json","r") as file:
             data = json.load(file)
             for pokemon in data.keys():
                 if data[pokemon] == "False":
-                    self.pok.append("unknown")
+                    self.pok.append("unknown") #Ajouter "unknown" pour les Pokémons non découverts
                 else:
-                    self.pok.append(pokemon)
-                self.index_affichage = 50
+                    self.pok.append(pokemon) #Ajouter le nom du Pokémon découvert 
+                self.index_affichage = 50  #Index pour gérer l'affichage
         self.l_affichage = []
         
+        #Paramètres pour l'affichage des icônes Pokémon
         self.colonnes = 15
         self.largeur_image = 40
         self.espace_entre_lignes = 10
         
+        #Boucle principale du programme
         self.running = True
         while self.running:
             self.afficher()
@@ -29,6 +33,7 @@ class choixPokemon:
             pygame.display.flip()
     
     def afficher(self):
+        #Affichage de l'arrière-plan et des icônes Pokémon 
         self.ecran.blit(self.fond,(0,0))
         
         self.l_affichage = self.pok.copy()
@@ -45,6 +50,7 @@ class choixPokemon:
 
 
     def gerer_evenements(self):
+        #Gestion des évènements utilisateur 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
@@ -54,9 +60,10 @@ class choixPokemon:
                 if clicked_pokemon and clicked_pokemon != "unknown":
                     self.update_player_pokemon(clicked_pokemon)
                     jeu = Game()
-                    jeu.run()
+                    jeu.run() #Lancement du jeu avec le pokémon sélectionné
 
     def get_clicked_pokemon(self, x, y):
+        #Identifier le Pokémon cliqué par l'utilisateur 
         for i in range(len(self.l_affichage)):
             pokemon = self.l_affichage[i]
             image_rect = pygame.Rect(
@@ -70,10 +77,10 @@ class choixPokemon:
         return None
 
     def update_player_pokemon(self, selected_pokemon):
+        #Mise à jour du fichier JSON avec le Pokémon sélectionné par le joueur
         with open("assets/pokemon_player.json", "r") as file:
             player_data = json.load(file)
 
-        # Update the player's Pokemon data with the selected Pokemon
         player_data["selected_pokemon"] = selected_pokemon
 
         with open("assets/pokemon_player.json", "w") as file:

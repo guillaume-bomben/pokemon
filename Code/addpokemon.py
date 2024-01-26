@@ -5,12 +5,14 @@ import shutil
 from tkinter import filedialog
 from tkinter import Tk
 
-# Constants for the dimensions and positions
+#Dimension des boutons 
 BUTTON_SIZE = (200, 50)
 
 class addpokemon:
     def __init__(self):
         pygame.init()
+
+ ## Initialisation de la taille de la fenêtre et des couleurs de base
         self.window_size = (800,600)
         self.screen = pygame.display.set_mode(self.window_size)
         self.input_boxes_width = 100
@@ -18,10 +20,13 @@ class addpokemon:
         self.white = (255, 255, 255)
         self.black = (0,0,0)
 
+## Chargement de l'image de fond et de la police
         self.background = pygame.image.load("assets/Menu/add pokemon fond.png")
         self.font = pygame.font.Font(None, 24)
 
-        # Define the positions for input boxes and buttons
+#Définition des positions pour les zones de saisie et les boutons
+#(positions calculées en fonction de la taille de la fenêtre)
+
         self.name_box_pos   = (800 * 0.12, 600 * 0.1)
         self.pv_box_pos     = (800 * 0.12, 600 * 0.2)
         self.type1_box_pos  = (800 * 0.12, 600 * 0.3)
@@ -55,7 +60,7 @@ class addpokemon:
         self.select_sprite_button_pos = (800 * 0.3, 600 * 0.7)
         self.save_button_pos = (800 * 0.3, 600 * 0.8)
 
-        # Create input boxes
+        ## Création des zones de saisie
         self.input_boxes = {
             'name':    pygame.Rect(self.name_box_pos,    (self.input_boxes_width, self.input_boxes_height)),
             'pv':      pygame.Rect(self.pv_box_pos,      (self.input_boxes_width, self.input_boxes_height)),
@@ -88,14 +93,14 @@ class addpokemon:
             'tcn4':    pygame.Rect(self.tcn4_box_pos,    (self.input_boxes_width, self.input_boxes_height))
         }
 
-        # Create buttons
+        ## Création des boutons
         self.buttons = {
             'select_sprite': pygame.Rect(self.select_sprite_button_pos, (200, 50)),
             'save': pygame.Rect(self.save_button_pos, (200, 50))
         }
 
         # Input data
-        # Données d'entrée
+        ## Données d'entrée initialisées à vide
         self.input_data = {
             'name': '',
             'type1': '','type2': '',
@@ -115,6 +120,8 @@ class addpokemon:
 
 
     def render_labels(self):
+        
+        ## Affichage des étiquettes à côté des zones de saisie
         labels = {
             'name': 'NAME :', 'pv':'PV :',
             'type1': 'TYPE 1 :','type2': 'TYPE 2 :',
@@ -138,6 +145,8 @@ class addpokemon:
 
 
     def handle_events(self):
+        
+        ## Gestion des événements (clics, frappes au clavier)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return False
@@ -163,28 +172,29 @@ class addpokemon:
 
 
     def handle_click(self, position):
-        # Check if any of the buttons were clicked
+        ## Réaction aux clics sur les boutons
         for button_name, button_rect in self.buttons.items():
             if button_rect.collidepoint(position):
                 if button_name == 'select_sprite':
                     self.select_sprite()
                 elif button_name == 'save':
                     self.save_pokemon()
-                break  # If a button was clicked, no need to check the others
+                break  
 
 
-    # Placeholder methods for select_sprite and save_pokemon
     def select_sprite(self):
-        # Open a file dialog to select a sprite
-        Tk().withdraw()  # we don't want a full GUI, so keep the root window from appearing
-        sprite_path = filedialog.askopenfilename()  # show an "Open" dialog box and return the path to the selected file
+        ## Ouvre une fenêtre de dialogue pour sélectionner une image de sprite
+        Tk().withdraw()  
+        sprite_path = filedialog.askopenfilename() 
         if sprite_path:
             self.input_data['sprite'] = sprite_path 
 
 
     def save_pokemon(self):
-        print("Attempting to save the pokemon...")  # Debug print
-        # Check if all fields are filled
+
+        ## Sauvegarde des informations du Pokémon dans un fichier JSON
+        # ... (vérification des champs, copie de l'image du sprite, création de la structure JSON)
+        print("Attempting to save the pokemon...")  
         if not all(self.input_data.values()):
             print("Some fields are missing.")
             return
@@ -249,6 +259,8 @@ class addpokemon:
             print(f"An error occurred while saving the Pokemon: {e}")
 
     def run(self):
+        
+        ## Boucle principale de l'application
         running = True
         while running:
             running = self.handle_events()

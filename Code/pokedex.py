@@ -7,36 +7,40 @@ class pokedex:
     def __init__(self):
         clock = pygame.time.Clock()
         self.ecran = pygame.display.set_mode((800, 600))
-        self.fond = pygame.image.load("assets/Menu/Pokedex.png")
-        self.font = pygame.font.Font(None, 32)
-        self.current_pokemon = "Bulbizarre" 
+        self.fond = pygame.image.load("assets/Menu/Pokedex.png") #Chargement de l'image de fond du pokédex
+        self.font = pygame.font.Font(None, 32) #Configuration de la police 
+        self.current_pokemon = "Bulbizarre"  #Pokémon actuellement affiché 
         
+        #Initialisation de la liste des Pokémon et compteur de rencontre
         self.pok = []
         self.rencontre = 0
         with open("assets/pokedex.json","r") as file:
             data = json.load(file)
             for pokemon in data.keys():
                 if data[pokemon] == "True":
-                    self.rencontre += 1
+                    self.rencontre += 1 #Compteur de Pokémon rencontrés
                     self.pok.append(pokemon)
                 else:
-                    self.pok.append("unknown")
+                    self.pok.append("unknown") #Ajout d'un placeholder pour les pokémon non rencontrés
                 self.index_affichage = 5
         self.l_affichage = []
         self.index_page = 1
-        self.apok = AnimatedSprite(self.current_pokemon,"Face")
-        self.apok.rect.center = (175, 175)
+        self.apok = AnimatedSprite(self.current_pokemon,"Face") #Sprite animé du Pokémon actuel
+        self.apok.rect.center = (175, 175) #Position du sprite 
         
+        #Boucle principale du Pokédex
         self.running = True
         while self.running:
-            self.afficher()
-            self.gerer_evenements()
-            self.afficher_caracteristiques(self.current_pokemon)
+            self.afficher() #Affichage des éléments du pokédex
+            self.gerer_evenements() #Gestion des évènements utilisateur 
+            self.afficher_caracteristiques(self.current_pokemon) #Affichage des caractéristiques du pokémon
             pygame.display.flip()
-            clock.tick(10)
+            clock.tick(10) #Limitation de la vitesse de la boucle 
 
 
     def gerer_evenements(self):
+        #Gestion des clics de la souris et navigation dans le pokédex 
+        #...(code pour gérer les clics sur les boutons de navigation et sélection de Pokémon)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
@@ -69,6 +73,8 @@ class pokedex:
 
 
     def afficher(self):
+        #Affichage de l'interface du Pokédex
+        #...(code pour afficher les statistiques et les attaques du Pokémon sélectionné)
         self.ecran.blit(self.fond,(0,0))
         self.apok.update()
         self.apok.draw(self.ecran)
