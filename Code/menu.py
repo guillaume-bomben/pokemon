@@ -10,10 +10,9 @@ class Menu:
     def __init__(self):
         self.background = pygame.image.load("assets/Menu/Background menu.png")
 
-        original_image = pygame.image.load("assets/Menu/2.png")
-        self.m2_size = (220, 36)
-        self.m2 = pygame.transform.scale(original_image, self.m2_size)
-        self.m2_hover = pygame.transform.scale(original_image, (int(self.m2_size[0]*1.2), int(self.m2_size[1]*1.2)))  # Image agrandie pour la souris
+        self.m2 = pygame.image.load("assets/Menu/bmenu.png")
+        self.m2_size = (220, 40)
+        self.m2_hover = pygame.transform.scale(self.m2, (int(self.m2_size[0]*1.2), int(self.m2_size[1]*1.2)))  # Image agrandie pour la souris
 
         pygame.mixer.music.load("assets/remix.mp3")
         pygame.mixer.music.set_volume(0.1)
