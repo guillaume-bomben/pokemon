@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Insecte",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Corps Perdu" , "type" : "Combat" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Plaie Croix" , "type" : "Insecte" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Force" , "type" : "Normal" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Surpuissance" , "type" : "Combat" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1700, "height": 2625
+  },
+  "cut" : {
+    "width" : 170, "height": 175
   }
 }

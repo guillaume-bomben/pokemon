@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Trepignement" , "type" : "Sol" , "power" : 75 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Coup d'Boule" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Osmerang" , "type" : "Sol" , "power" : 50 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Mania" , "type" : "Normal" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1820
+  },
+  "cut" : {
+    "width" : 150, "height": 130
   }
 }

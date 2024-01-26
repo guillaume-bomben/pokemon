@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Coud'Boue" , "type" : "Sol" , "power" : 20 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Faux-Chage" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Osmerang" , "type" : "Sol" , "power" : 50 , "precision" : 90 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Charge Os" , "type" : "Sol" , "power" : 40 , "precision" : 90 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1300, "height": 2080
+  },
+  "cut" : {
+    "width" : 130, "height": 130
   }
 }

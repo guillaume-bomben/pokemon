@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Glace",
     "Type2": "Psy"
+  },
+  "atk1" : {
+    "Name" : "Implore" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Poing Glace" , "type" : "Glace" , "power" : 75 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Psyko" , "type" : "Psy" , "power" : 90 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Blizzard" , "type" : "Glace" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1870
+  },
+  "cut" : {
+    "width" : 175, "height": 170
   }
 }

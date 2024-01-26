@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Seisme" , "type" : "Sol" , "power" : 100 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Tunnel" , "type" : "Sol" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Meteores" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1800
+  },
+  "cut" : {
+    "width" : 140, "height": 150
   }
 }

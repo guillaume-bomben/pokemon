@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Roche",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Machouille" , "type" : "Tenebres" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Tete de Fer" , "type" : "Acier" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Lame de Roc" , "type" : "Roche" , "power" : 100 , "precision" : 80 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Ultralaser" , "type" : "Normal" , "power" : 150 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1900, "height": 360
+  },
+  "cut" : {
+    "width" : 190, "height": 180
   }
 }

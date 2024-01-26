@@ -12,18 +12,33 @@ class Combat:
         self.fond_win_or_loose = pygame.image.load('assets/Combat/Image/Winner fond.png')  
         
         #Sprite adversaire
-        #adversaire_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Face/{EpokName}.png') ,(1250,1250))
         self.adversaire = AnimatedSprite(EpokName,"Face")
         self.adversaire.rect.bottomright = (655, 325)
         
         #Sprite Joueur
-        #joueur_image = pygame.transform.scale(pygame.image.load(f'assets/Pokemon/Back/{PpokName}.png'), (1250,1375))    
         self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
-        self.player = pokemon(PpokName)
-        self.ennemy = pokemon(EpokName)
+        with open("assets/liste_Player_Pokemon.json", "r+") as file0:
+            data = json.load(file0)
+            if PpokName not in data:
+                data[PpokName] = {
+                    "LV": 5,
+                    "XP": 0
+                }
+                file0.seek(0)
+                json.dump(data, file0, indent=2)
+                file0.truncate()
+                pokemon_lv = 5
+                pokemon_xp = 0
+            else:
+                pokemon_lv = data[PpokName]["LV"]
+                pokemon_xp = data[PpokName]["XP"]
+        self.player = pokemon(PpokName,pokemon_lv,pokemon_xp)
+        ennemy_lv = random.randint(pokemon_lv-2,pokemon_lv+2)
+        self.ennemy = pokemon(EpokName,ennemy_lv)
         self.winner = None
+        self.out = False
         
         self.vert = (0, 255, 0)
         self.blanc = (255, 255, 255)
@@ -40,13 +55,19 @@ class Combat:
             self.attacks_player = json.load(file1)
         with open(f'assets/Pokemon/Json/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
+        with open("assets/Pokedex.json", "r+") as file3:
+            self.pokedex = json.load(file3)
+            self.pokedex[EpokName] = "True"
+            file3.seek(0)  # Déplace le curseur au début du fichier
+            json.dump(self.pokedex, file3, indent=2)  # Réécrit le fichier avec la mise à jour
+            file3.truncate()  # Tronque le fichier à la position actuelle (élimine le contenu excédentaire)
 
-        running = True
-        while running:
+        self.running = True
+        while self.running:
             events = pygame.event.get()
             for event in events:
                 if event.type == pygame.QUIT:
-                    running = False
+                    self.running = False
             if self.win == False:
                 self.gerer_evenements(events)  # Gérer les événements pour le combat
             else:
@@ -66,13 +87,13 @@ class Combat:
         self.longeur_life_player = int(168 * pourcentage_vie_joueur)
         # Dessiner la barre de vie du joueur
         pygame.draw.rect(self.ecran, self.vert, (571, 428, self.longeur_life_player, 13))
-        pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
+        #pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
         pourcentage_vie_ennemy = (self.ennemy.pv / self.ennemy.pvmax) if self.ennemy.pvmax > 0 else 0
         self.longeur_life_ennemy = int(168 * pourcentage_vie_ennemy)
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
-        pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
+        #pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
         
         # afficher le nom du joueur
         joueur_name_surface = self.font.render(f"{self.player.name}", True, self.blanc)
@@ -100,22 +121,22 @@ class Combat:
             attack_type = self.attacks_player[attack_key]["type"]
 
             # Vérifiez si la souris survole le bouton
-            button_rect = pygame.Rect(85 if i < 2 else 435, 495 if i % 2 == 0 else 550, 265, 50)
+            button_rect = pygame.Rect(85 if i < 2 else 435, 490 if i % 2 == 0 else 545, 265, 50)
             
             if button_rect.collidepoint(mouse_pos):
                 # Si survolé, utilisez l'image de survol
                 attack_image = pygame.image.load(f"assets/Combat/Image/Batk {attack_type}.png")
                 attack_image = pygame.transform.scale(attack_image, (265, 50))
-                self.ecran.blit(attack_image, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+                self.ecran.blit(attack_image, (85 if i < 2 else 435, 490 if i % 2 == 0 else 545))
             else:
                 # Sinon, utilisez l'image normale
                 batk = pygame.image.load("assets/Combat/Image/Batk basse.png")
                 batk = pygame.transform.scale(batk, (265, 50))
-                self.ecran.blit(batk, (85 if i < 2 else 435, 495 if i % 2 == 0 else 550))
+                self.ecran.blit(batk, (85 if i < 2 else 435, 490 if i % 2 == 0 else 545))
 
             # Affichez le texte
             text_surface = self.font.render(attack_name, True, (0, 0, 0))
-            text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 520 if i % 2 == 0 else 575))
+            text_rect = text_surface.get_rect(center=(225 if i < 2 else 575, 515 if i % 2 == 0 else 570))
             self.ecran.blit(text_surface, text_rect)
 
 
@@ -150,9 +171,18 @@ class Combat:
             
             if defenseur.pv < 0:
                 self.win = True
-                attaquant.xp_gains((175*defenseur.lv)/7)
-                print(attaquant.lv)
-                print(attaquant.xp)
+                if self.tour_joueur:
+                    attaquant.xp_gains((175*defenseur.lv)/7)
+                    with open("assets/liste_Player_Pokemon.json", "r+") as liste:
+                        data = json.load(liste)
+                        data[attaquant.name]["LV"] = attaquant.lv
+                        data[attaquant.name]["XP"] = attaquant.xp
+                        liste.seek(0)
+                        json.dump(data, liste, indent=2)
+                        liste.truncate()
+
+                    print(attaquant.lv)
+                    print(attaquant.xp)
                 if defenseur == self.player:
                     self.winner = self.adversaire
                 else:
@@ -194,3 +224,7 @@ class Combat:
         self.winner.rect.midbottom = (400,350)
         self.winner.update()
         self.winner.draw(self.ecran)
+        
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_a]:
+            self.running = False

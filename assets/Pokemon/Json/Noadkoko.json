@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "Psy"
+  },
+  "atk1" : {
+    "Name" : "Choc Psy" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Extrasenseur" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Giga-Sangsue" , "type" : "Plante" , "power" : 75 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Tempete Verte" , "type" : "Plante" , "power" : 130 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1575
+  },
+  "cut" : {
+    "width" : 140, "height": 175
   }
 }

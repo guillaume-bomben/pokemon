@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Sol",
     "Type2": "Roche"
+  },
+  "atk1" : {
+    "Name" : "Charge" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Anti-Air" , "type" : "Roche" , "power" : 50 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Pietisol" , "type" : "Sol" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Koud'Korne" , "type" : "Normal" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 2000
+  },
+  "cut" : {
+    "width" : 140, "height": 125
   }
 }

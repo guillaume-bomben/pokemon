@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Insecte",
     "Type2": "Plante"
+  },
+  "atk1" : {
+    "Name" : "Eco-Sphere" , "type" : "Plante" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Tranche" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Plaie Croix" , "type" : "Insecte" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Choc Venin" , "type" : "Poison" , "power" : 65 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1500, "height": 1050
+  },
+  "cut" : {
+    "width" : 150, "height": 150
   }
 }

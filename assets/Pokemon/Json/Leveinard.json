@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Implore" , "type" : "Normal" , "power" : 60 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Voix Enjoleuse" , "type" : "Fee" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Ecras'Face" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Echo" , "type" : "Normal" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1700, "height": 1800
+  },
+  "cut" : {
+    "width" : 170, "height": 150
   }
 }

@@ -4,4 +4,3 @@ import pygame
 pygame.init()
 
 menu = Menu()
-

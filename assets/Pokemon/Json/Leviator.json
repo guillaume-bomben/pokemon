@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "Vol"
+  },
+  "atk1" : {
+    "Name" : "Hydrocanon" , "type" : "Eau" , "power" : 110 , "precision" : 80 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Vent Violent" , "type" : "Vol" , "power" : 110 , "precision" : 70 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Mania" , "type" : "Normal" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Ultralaser" , "type" : "Normal" , "power" : 150 , "precision" : 90 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1900, "height": 1620
+  },
+  "cut" : {
+    "width" : 190, "height": 180
   }
 }

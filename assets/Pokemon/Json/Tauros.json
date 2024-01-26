@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Koud'Korne" , "type" : "Normal" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Psykoud'Boul" , "type" : "Psy" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Taurogne" , "type" : "Normal" , "power" : 90 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Mania" , "type" : "Normal" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1750, "height": 1200
+  },
+  "cut" : {
+    "width" : 175, "height": 150
   }
 }

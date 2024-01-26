@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Eco-Sphere" , "type" : "Plante" , "power" : 80 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Sabotage" , "type" : "Tenebres" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Giga-Sangsue" , "type" : "Plante" , "power" : 75 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Pouvoir Antique" , "type" : "Roche" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  },
+  "scale" : {
+    "width" : 1250, "height": 875
+  },
+  "cut" : {
+    "width" : 125, "height": 125
   }
 }

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Plante",
     "Type2": "Psy"
+  },
+  "atk1" : {
+    "Name" : "Vole-Vie" , "type" : "Plante" , "power" : 20 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk2" : {
+    "Name" : "Mega-Sangsue" , "type" : "Plante" , "power" : 40 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Choc Mental" , "type" : "Fee" , "power" : 50 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk4" : {
+    "Name" : "Balle Graine" , "type" : "Plante" , "power" : 35 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1500, "height": 750
+  },
+  "cut" : {
+    "width" : 150, "height": 125
   }
 }

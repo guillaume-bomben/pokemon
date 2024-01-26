@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Eau",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Picpic" , "type" : "Vol" , "power" : 35 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Vibraqua" , "type" : "Eau" , "power" : 60 , "precision" : 100 , "tcap" : "special"
+  } ,
+  "atk3" : {
+    "Name" : "Koud'Korne" , "type" : "Normal" , "power" : 65 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Cascade" , "type" : "Eau" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1400, "height": 1680
+  },
+  "cut" : {
+    "width" : 140, "height": 140
   }
 }

@@ -11,5 +11,23 @@
   "Type": {
     "Type1": "Normal",
     "Type2": "None"
+  },
+  "atk1" : {
+    "Name" : "Coup d'Boule" , "type" : "Normal" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk2" : {
+    "Name" : "Coup Bas" , "type" : "Tenebres" , "power" : 70 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk3" : {
+    "Name" : "Machouille" , "type" : "Tenebres" , "power" : 80 , "precision" : 100 , "tcap" : "physique"
+  } ,
+  "atk4" : {
+    "Name" : "Colere" , "type" : "Dragon" , "power" : 120 , "precision" : 100 , "tcap" : "physique"
+  },
+  "scale" : {
+    "width" : 1800, "height": 4550
+  },
+  "cut" : {
+    "width" : 180, "height": 175
   }
 }
