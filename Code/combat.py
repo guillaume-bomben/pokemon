@@ -8,20 +8,22 @@ from AnimatedSprite import AnimatedSprite
 class Combat:
     def __init__(self,PpokName,EpokName):
         clock = pygame.time.Clock()
+        #Chargement des images de fond pour le combat et la victoire/défaite
         self.fond = pygame.image.load('assets/Combat/Image/Combat Background.png')
         self.fond_win_or_loose = pygame.image.load('assets/Combat/Image/Winner fond.png')  
         
-        #Sprite adversaire
+        #Création des sprites pour l'adversaire et le joueur
         self.adversaire = AnimatedSprite(EpokName,"Face")
         self.adversaire.rect.bottomright = (655, 325)
         
-        #Sprite Joueur
         self.joueur =  AnimatedSprite(PpokName,"Back")
         self.joueur.rect.bottomleft = (125,475)
         
+        #Chargement et gestion des niveaux et de l'expérience des Pokémons
         with open("assets/liste_Player_Pokemon.json", "r+") as file0:
             data = json.load(file0)
             if PpokName not in data:
+            #Si le Pokémon du joueur n'est pas dans le fichier, l'ajouter avec un niveau de base
                 data[PpokName] = {
                     "LV": 5,
                     "XP": 0
@@ -34,12 +36,15 @@ class Combat:
             else:
                 pokemon_lv = data[PpokName]["LV"]
                 pokemon_xp = data[PpokName]["XP"]
+        
+        #Création des objets Pokémons pour le joueur et l'adversaire
         self.player = pokemon(PpokName,pokemon_lv,pokemon_xp)
         ennemy_lv = random.randint(pokemon_lv-2,pokemon_lv+2)
         self.ennemy = pokemon(EpokName,ennemy_lv)
         self.winner = None
         self.out = False
         
+        #Configuration des couleurs et des dimensions pour les barres de vie 
         self.vert = (0, 255, 0)
         self.blanc = (255, 255, 255)
         self.noir = (0, 0, 0)
@@ -48,13 +53,18 @@ class Combat:
 
         self.ecran = pygame.display.set_mode((800, 600))
 
+        #Initialisation de l'état du combat 
         self.tour_joueur = True
         self.win = False
         self.font = pygame.font.Font(None, 36)
+
+        #Chargement des attauqes des Pokémon depuis les fichier JSON 
         with open(f'assets/Pokemon/Json/{PpokName}.json', 'r') as file1:
             self.attacks_player = json.load(file1)
         with open(f'assets/Pokemon/Json/{EpokName}.json', 'r') as file2:
             self.attacks_ennemy = json.load(file2)
+        
+        #Mise à jour du Pokédex pour indiquer que l'adversaire a été rencontré
         with open("assets/Pokedex.json", "r+") as file3:
             self.pokedex = json.load(file3)
             self.pokedex[EpokName] = "True"
@@ -62,6 +72,7 @@ class Combat:
             json.dump(self.pokedex, file3, indent=2)  # Réécrit le fichier avec la mise à jour
             file3.truncate()  # Tronque le fichier à la position actuelle (élimine le contenu excédentaire)
 
+        #Boucle principale de gestion du combat 
         self.running = True
         while self.running:
             events = pygame.event.get()
@@ -77,7 +88,9 @@ class Combat:
 
 
     def afficher(self):
-        self.ecran.blit(self.fond, (0, 0))  # Afficher le fond du combat
+        #Méthode pour afficher les éléments du combat sur l'écran 
+        #...(code pour l'affichage des spirtes, barres de vie, noms et niveaux)
+        self.ecran.blit(self.fond, (0, 0))  
         self.joueur.update()
         self.joueur.draw(self.ecran)
         self.adversaire.update()
@@ -85,20 +98,21 @@ class Combat:
         
         pourcentage_vie_joueur = (self.player.pv / self.player.pvmax) if self.player.pvmax > 0 else 0
         self.longeur_life_player = int(168 * pourcentage_vie_joueur)
+      
         # Dessiner la barre de vie du joueur
         pygame.draw.rect(self.ecran, self.vert, (571, 428, self.longeur_life_player, 13))
-        #pygame.draw.rect(self.ecran, self.noir, (571, 428, 168, 13), 2)  # Bordure
 
         pourcentage_vie_ennemy = (self.ennemy.pv / self.ennemy.pvmax) if self.ennemy.pvmax > 0 else 0
         self.longeur_life_ennemy = int(168 * pourcentage_vie_ennemy)
+        
         # Dessiner la barre de vie de l'adversaire
         pygame.draw.rect(self.ecran, self.vert, (131,140, self.longeur_life_ennemy, 12))
-        #pygame.draw.rect(self.ecran, self.noir, (131, 140, 168, 12), 2)  # Bordure
         
         # afficher le nom du joueur
         joueur_name_surface = self.font.render(f"{self.player.name}", True, self.blanc)
         joueur_name_rect = joueur_name_surface.get_rect(midbottom=(600, 425))
         self.ecran.blit(joueur_name_surface, joueur_name_rect)
+       
         # afficher le niveau du joueur
         joueur_lv_surface = self.font.render(f"{self.player.lv}", True, self.blanc)
         joueur_lv_rect = joueur_lv_surface.get_rect(midbottom=(765, 425))
@@ -108,6 +122,7 @@ class Combat:
         adversaire_name_surface = self.font.render(f"{self.ennemy.name}", True, self.blanc)
         adversaire_name_rect = adversaire_name_surface.get_rect(midbottom=(150, 135))
         self.ecran.blit(adversaire_name_surface, adversaire_name_rect)
+        
         # afficher le niveau de l'adversaire
         adversaire_lv_surface = self.font.render(f"{self.ennemy.lv}", True, self.blanc)
         adversaire_lv_rect = adversaire_lv_surface.get_rect(midbottom=(325, 135))
@@ -115,6 +130,8 @@ class Combat:
 
 
     def afficher_menu(self, mouse_pos):
+        #Méthode pour afficher les éléments du combat sur l'écran 
+        #...(code pour l'affichage des spirtes, barres de vie, noms et niveaux)
         included_keys = ["atk1", "atk2", "atk3", "atk4"]
         for i, attack_key in enumerate(included_keys):
             attack_name = self.attacks_player[attack_key]["Name"]
@@ -141,6 +158,8 @@ class Combat:
 
 
     def utiliser_capacite(self, capacite_key):
+        #Méthode pour gérer l'utilisation des capacités pendant le combat 
+        #...(code pour calculer les dégâts, gérer les niveaux et l'expérience)
         if self.tour_joueur :
             power_capacite = self.attacks_player[capacite_key]["power"]
             capacite_type = self.attacks_player[capacite_key]["tcap"]
@@ -193,6 +212,8 @@ class Combat:
 
 
     def gerer_evenements(self, events):
+        #Méthode pour gérer les évènements utilisateur pendant le combat 
+        #...(code pour gérer les clics de souris et l'utilisation des capacités)
         self.afficher()
         mouse_pos = pygame.mouse.get_pos()
         self.afficher_menu(mouse_pos)
@@ -220,6 +241,8 @@ class Combat:
 
 
     def fin_combat(self):
+        #Méthode pour gérer la fin du combat 
+        #...(code pour afficher le résultat du combat et permettre de quitter)
         self.ecran.blit(self.fond_win_or_loose,(0,0))
         self.winner.rect.midbottom = (400,350)
         self.winner.update()
