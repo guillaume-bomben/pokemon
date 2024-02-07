@@ -80,7 +80,7 @@
   "Ramoloss": "False",
   "Flagadoss": "False",
   "Magneti": "False",
-  "Magneton": "False",
+  "Magneton": "True",
   "Canarticho": "False",
   "Doduo": "False",
   "Dodrio": "False",
@@ -122,7 +122,7 @@
   "Staross": "True",
   "M. Mime": "False",
   "Insecateur": "False",
-  "Lippoutou": "False",
+  "Lippoutou": "True",
   "Elektek": "False",
   "Magmar": "True",
   "Scarabrute": "False",
@@ -147,6 +147,6 @@
   "Minidraco": "False",
   "Draco": "False",
   "Dracolosse": "False",
-  "Mewtwo": "False",
+  "Mewtwo": "True",
   "Mew": "False"
 }

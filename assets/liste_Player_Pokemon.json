@@ -14,5 +14,13 @@
   "Staross": {
     "LV": 5,
     "XP": 100.0
+  },
+  "Raichu": {
+    "LV": 5,
+    "XP": 0
+  },
+  "Mackogneur": {
+    "LV": 6,
+    "XP": 175.0
   }
 }
